@@ -1,0 +1,40 @@
+{
+    "name": "@ovchinnikov-lxs/dev-kit-layer",
+    "type": "module",
+    "version": "0.0.0",
+    "description": "This is a dev kit layer for my pet project",
+    "license": "ISC",
+    "main": "./nuxt.config.ts",
+    "scripts": {
+        "play:dev": "nuxi dev .playground",
+        "play:build": "nuxt build .playground",
+        "play:generate": "nuxt generate .playground",
+        "play:preview": "nuxt preview .playground",
+        "postinstall": "nuxt prepare .playground",
+        "test:unit": "vitest run --coverage"
+    },
+    "dependencies": {
+        "@nuxt/image": "^1.7.0",
+        "@nuxtjs/svg-sprite": "^1.0.2",
+        "@tiptap/pm": "^2.4.0",
+        "@tiptap/starter-kit": "^2.4.0",
+        "@tiptap/vue-3": "^2.4.0",
+        "@vueuse/core": "^10.9.0",
+        "@vueuse/nuxt": "^10.9.0",
+        "animejs": "^3.2.2",
+        "defu": "^6.1.4",
+        "lodash": "^4.17.21",
+        "maska": "^2.1.11",
+        "swiper": "^11.1.4"
+    },
+    "devDependencies": {
+        "@types/animejs": "^3.1.12",
+        "@types/lodash": "^4.17.4",
+        "@types/node": "^20.12.12",
+        "nuxt": "^3.11.2",
+        "sass": "^1.77.2"
+    },
+    "browserslist": [
+        ">0.3%, defaults"
+    ]
+}
