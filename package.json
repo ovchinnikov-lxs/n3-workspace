@@ -1,7 +1,7 @@
 {
     "name": "@ovchinnikov-lxs/n3-workspace",
     "type": "module",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "private": true,
     "description": "A mono-repository for all my projects and utilities on Nuxt",
     "author": "ovchinnikov-lxs",
