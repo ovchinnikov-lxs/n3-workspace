@@ -14,6 +14,10 @@
 import type { TUiClassList } from '#dev-kit-layer/types';
 import type { IUiButtonProps } from '#dev-kit-layer/types/components/button';
 
+defineOptions({
+    inheritAttrs: false,
+});
+
 const props = defineProps<IUiButtonProps>();
 
 const { getClassName } = useUiClassName(props);
