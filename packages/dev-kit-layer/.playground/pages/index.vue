@@ -1,45 +1,46 @@
 <template>
     <div class="IndexPage">
         <h1>
-            {{ 'No time for storybook, this is my playground...' }}
+            {{ $t('title') }}
         </h1>
 
         <div id="demo-button">
             <BaseButton outline>
-                {{ 'heloo' }}
+                {{ $t('hello.world') }}
             </BaseButton>
         </div>
 
         <div id="demo-checkbox">
-            <BaseCheckbox v-model="booleanValue">{{ 'lol' }}</BaseCheckbox>
+            <BaseCheckbox v-model="booleanValue">{{ $t('hello.world') }}</BaseCheckbox>
         </div>
 
         <div id="demo-collapse">
             <BaseCollapse v-model="booleanValue">
-                {{ 'hidden' }}
+                {{ $t('hello.world') }}
             </BaseCollapse>
         </div>
 
         <div id="demo-form-cell">
             <BaseFormCell for-id="base-checkbox">
-                <template #label>{{ 'label' }}</template>
+                <template #label>{{ $t('hello.world') }}</template>
 
                 <template #default>
                     <BaseCheckbox
                         id="base-checkbox"
                         v-model="booleanValue"
-                        >{{ 'lol' }}</BaseCheckbox
                     >
+                        {{ $t('hello.world') }}
+                    </BaseCheckbox>
                 </template>
 
-                <template #info>{{ 'info' }}</template>
+                <template #info>{{ $t('hello.world') }}</template>
             </BaseFormCell>
         </div>
 
         <div id="demo-icon">
             <BaseIcon icon="eye" />
 
-            <BaseIcon icon="https://cdn.cms.prazer.casino/tournaments_ef0766dadd_4a2ce593ae.svg" />
+            <BaseIcon icon="https://placehold.co/300x300/svg" />
         </div>
 
         <div
@@ -87,9 +88,9 @@
                 parent-width
                 :model-value="true"
             >
-                <template #top> {{ 'top' }} </template>
+                <template #top> {{ $t('hello.world') }} </template>
 
-                <template #bottom> {{ 'bottom' }} </template>
+                <template #bottom> {{ $t('hello.world') }} </template>
             </BasePopover>
         </div>
 
@@ -166,20 +167,20 @@
 
         <div id="demo-toggle">
             <BaseToggle>
-                <template #false-label>{{ 'off' }}</template>
+                <template #false-label>{{ $t('hello.world') }}</template>
 
-                <template #true-label>{{ 'on' }}</template>
+                <template #true-label>{{ $t('hello.world') }}</template>
             </BaseToggle>
         </div>
 
         <div id="demo-tooltip">
             <BaseTooltip>
                 <template #top>
-                    {{ 'look info' }}
+                    {{ $t('hello.world') }}
                 </template>
 
                 <template #bottom>
-                    {{ 'look info bottom' }}
+                    {{ $t('hello.world') }}
                 </template>
             </BaseTooltip>
         </div>
