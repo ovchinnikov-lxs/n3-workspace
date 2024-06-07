@@ -4,14 +4,14 @@
         :class="[getClassName('Icon'), classList]"
     >
         <LazySvgIcon
-            v-if="!isExternal && icon"
+            v-if="!isValidUrl(icon)"
             :name="icon"
             :view-box="viewBox"
             :class="getClassName('Icon__el')"
         />
 
         <span
-            v-else
+            v-else-if="externalData"
             ref="externalRef"
             :class="[getClassName('Icon__el'), externalClassList]"
             v-html="externalData"
@@ -36,38 +36,29 @@ const classList = computed<TUiClassList>(() => [
     sizeClassList.value,
 ]);
 
-function useExternalIcon() {
-    const externalRef = ref<HTMLSpanElement>();
-    const showExternal = ref(false);
-    const externalData = ref<string | null>(null);
-
-    const isExternal = computed(() => isValidUrl(props.icon));
-    const isLoaded = ref(true);
-
-    const externalClassList = computed(() => [
-        '--is-external',
-        {
-            '--is-loaded': isLoaded.value,
-        },
-    ]);
-
-    const fetchExternalIcon = async (url: string) => {
+async function useExternalIcon() {
+    const { data: externalData } = await useAsyncData(`external-icon-${props.icon}`, async () => {
         try {
-            return await $fetch<string>(url, { responseType: 'text' });
+            if (!isValidUrl(props.icon)) {
+                return null;
+            }
+
+            if (!props.icon.includes('svg')) {
+                return null;
+            }
+
+            return await $fetch<string>(props.icon, { responseType: 'text' });
         } catch (e) {
-            console.error('UI_ICON:FETCH_EXTERNAL_ICON', e);
+            console.error('UI_ICON:ASYNC_DATA', e);
             return null;
         }
-    };
+    });
+
+    const externalRef = ref<HTMLSpanElement>();
+
+    const isLoaded = ref(true);
 
     const initExternalIcon = async () => {
-        if (!props.icon.includes('svg')) {
-            return;
-        }
-
-        externalData.value = await fetchExternalIcon(props.icon);
-        await nextTick();
-
         if (!externalRef.value) {
             return;
         }
@@ -78,27 +69,33 @@ function useExternalIcon() {
         });
     };
 
-    onMounted(async () => {
-        if (!props.icon || !isExternal.value) {
-            return;
-        }
-
+    async function handleExternalMounted() {
         await initExternalIcon();
         await nextTick();
 
         isLoaded.value = true;
-    });
+    }
+
+    const externalClassList = computed(() => [
+        '--is-external',
+        {
+            '--is-loaded': isLoaded.value,
+        },
+    ]);
 
     return {
-        isExternal,
         externalData,
         externalRef,
-        showExternal,
         externalClassList,
+        handleExternalMounted,
     };
 }
 
-const { isExternal, externalData, externalRef, externalClassList } = useExternalIcon();
+const { externalData, externalRef, externalClassList, handleExternalMounted } = await useExternalIcon();
+
+onMounted(() => {
+    handleExternalMounted();
+});
 </script>
 
 <style lang="scss">
@@ -110,6 +107,11 @@ const { isExternal, externalData, externalRef, externalClassList } = useExternal
         display: block;
         width: 100%;
         height: 100%;
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
 
         &.--is-external {
             opacity: 0;
