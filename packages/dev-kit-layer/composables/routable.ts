@@ -21,15 +21,9 @@ export function useUiRoutable(props: IUiRoutableProps) {
     });
 
     const routableClassList = computed((): TUiClassList => {
-        const interactiveTags = [
-            'NuxtLink',
-            'a',
-            'button',
-        ];
-
         return [
             {
-                '--is-interactive': interactiveTags.includes(componentTag.value),
+                '--is-interactive': !['span'].includes(String(componentTag.value)),
             },
         ];
     });

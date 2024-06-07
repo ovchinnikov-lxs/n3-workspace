@@ -6,7 +6,7 @@
                     v-for="(item, index) in imageSources"
                     :key="index"
                     :media="item.media"
-                    :srcset="item.srcset"
+                    :srcset="String(item.srcset)"
                     :data-media-key="item.dataMediaKey"
                 />
 
@@ -34,6 +34,7 @@
 import { isObject } from 'lodash';
 import type { IPXModifiers, ResolvedImage } from '@nuxt/image';
 import defu from 'defu';
+import type { ImgHTMLAttributes } from 'vue';
 import type { IUiImageObjectSrc, IUiImageProps, IUiImageSourceItem, TUiImageMediaKey, TUiImageMediaValue, TUiImageSrc } from '#dev-kit-layer/types/components/image';
 
 const props = withDefaults(defineProps<IUiImageProps>(), {
@@ -197,7 +198,7 @@ function getImageSrc(value?: TUiImageSrc): string {
 
 const isSwiperLazy = computed(() => props.lazy === 'swiper');
 
-const originAttrs = computed(() => ({
+const originAttrs = computed<ImgHTMLAttributes>(() => ({
     ...(process.server ? { onerror: "this.setAttribute('data-error', 1)" } : {}),
     ...(process.server ? { onload: "this.setAttribute('data-load', 1)" } : {}),
 

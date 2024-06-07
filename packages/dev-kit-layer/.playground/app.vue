@@ -1,5 +1,7 @@
 <template>
     <div>
+        <NuxtPwaManifest />
+
         <NuxtLayout>
             <NuxtPage />
         </NuxtLayout>
@@ -8,7 +10,7 @@
 
 <style>
 * {
-    font-family: monospace;
+    font-family: 'Reddit Mono', sans-serif;
 }
 
 :root {

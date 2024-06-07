@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { mount } from '@vue/test-utils';
+import type { IUiRoutableProps } from '#dev-kit-layer/types/composables/routable';
 
 describe('test composable routable', () => {
     it('should be availability', () => {
@@ -7,7 +8,7 @@ describe('test composable routable', () => {
     });
 
     it('should return component tag - NuxtLink', () => {
-        const COMPONENT_PROPS = {
+        const COMPONENT_PROPS: IUiRoutableProps = {
             tag: 'NuxtLink',
         };
 
@@ -23,7 +24,7 @@ describe('test composable routable', () => {
     });
 
     it('should be return class list with interactive state of component', () => {
-        const COMPONENT_PROPS = {
+        const COMPONENT_PROPS: IUiRoutableProps = {
             tag: 'button',
         };
         const EXPECTED_VALUE = [

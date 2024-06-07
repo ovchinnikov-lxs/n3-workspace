@@ -26,6 +26,7 @@
 </template>
 <script setup lang="ts">
 import type { MaskaDetail } from 'maska';
+import type { InputHTMLAttributes } from 'vue';
 import type { IUiInputProps, TUiInputValue } from '#dev-kit-layer/types/components/input';
 import type { TUiClassList } from '#dev-kit-layer/types';
 
@@ -45,7 +46,7 @@ const { stateClassList, stateAttrs } = useUiState(props);
 const { styleClassList } = useUiStyle(props);
 const attrs = useAttrs();
 
-const componentAttrs = computed(() => ({
+const componentAttrs = computed<InputHTMLAttributes>(() => ({
     ...stateAttrs,
     ...attrs,
 
@@ -59,7 +60,7 @@ const classList = computed<TUiClassList>(() => [
     styleClassList.value,
 ]);
 
-const maskaAttrs = computed(() => ({
+const maskaAttrs = computed<InputHTMLAttributes>(() => ({
     type: props.type === 'number' ? 'text' : props.type,
 
     ...(props.type === 'number' && {
