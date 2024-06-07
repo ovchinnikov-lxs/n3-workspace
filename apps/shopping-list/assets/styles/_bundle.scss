@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --ui-primary-color: #201658;
+    --ui-secondary-color: #1d24ca;
+    --ui-additional-color: #98abee;
+    --ui-white-color: #f9e8c9;
+    --ui-black-color: #000000;
+    --ui-error-color: #ff3636;
+    --ui-border-radius-m: calc(var(--ui-unit) * 8);
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    color: var(--ui-black-color);
+    background-color: var(--ui-white-color);
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+
+    @include respond-to(tablet) {
+        width: 100%;
+        padding: 0 calc(var(--ui-unit) * 5);
+    }
+}

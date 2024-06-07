@@ -105,6 +105,8 @@ const maskaAttrs = computed<InputHTMLAttributes>(() => ({
     &__item {
         width: 100%;
         height: 100%;
+        background: transparent;
+        border: none;
         outline: none;
         transition: all var(--ui-transition-duration) var(--ui-transition-timing-function);
 

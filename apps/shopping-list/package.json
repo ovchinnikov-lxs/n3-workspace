@@ -10,10 +10,12 @@
         "dev": "nuxt dev --host",
         "generate": "nuxt generate",
         "preview": "nuxt preview",
-        "postinstall": "nuxt prepare"
+        "postinstall": "nuxt prepare",
+        "generate-types": "npx supabase gen types typescript --project-id \"rihjywbwdijfaikghqkm\" > types/supabase.ts"
     },
     "dependencies": {
         "@nuxtjs/supabase": "^1.2.2",
+        "nanoid": "^5.0.7",
         "supabase": "^1.172.2",
         "uqr": "^0.1.2"
     }

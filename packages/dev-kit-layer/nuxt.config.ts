@@ -125,7 +125,10 @@ export default defineNuxtConfig({
         css: {
             preprocessorOptions: {
                 scss: {
-                    additionalData: `@use "${join(currentDir, './assets/styles/_common.scss')}" as *;`,
+                    additionalData: `
+                    @use "${join(currentDir, './assets/styles/_common.scss')}" as *;
+                    @use "~/assets/styles/_common.scss" as *;
+                    `,
                 },
             },
         },

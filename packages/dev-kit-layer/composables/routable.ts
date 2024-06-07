@@ -1,5 +1,6 @@
 import type { IUiRoutableProps } from '../types/composables/routable';
 import type { TUiClassList } from '../types';
+import { LazyNuxtLinkLocale } from '#components';
 
 export function useUiRoutable(props: IUiRoutableProps) {
     const attrs = useAttrs();
@@ -10,7 +11,7 @@ export function useUiRoutable(props: IUiRoutableProps) {
         }
 
         if (attrs.to) {
-            return 'NuxtLink';
+            return LazyNuxtLinkLocale;
         } else if (attrs.href) {
             return 'a';
         } else if (props.tag) {
