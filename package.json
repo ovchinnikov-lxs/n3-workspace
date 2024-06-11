@@ -15,7 +15,8 @@
         "node": ">=20.10.0"
     },
     "scripts": {
-        "cleanup": "rimraf 'packages/**/node_modules' 'playground/node_modules' 'node_modules'",
+        "cleanup": "rimraf 'apps/**/node_modules' 'packages/**/node_modules' 'playground/node_modules' 'node_modules'",
+        "env:root": "dotenv -- pnpm --filter",
         "typecheck": "tsc --noEmit",
         "prepare": "husky",
         "eslint:check": "eslint . --cache",
@@ -25,16 +26,21 @@
         "prettier:check": "npx prettier . --check",
         "prettier:fix": "pnpm exec prettier . --write",
         "lint:check": "pnpm run eslint:check && pnpm run stylelint:check && pnpm run prettier:check",
-        "lint:fix": "pnpm run eslint:fix && pnpm run stylelint:fix && pnpm run prettier:fix"
+        "lint:fix": "pnpm run eslint:fix && pnpm run stylelint:fix && pnpm run prettier:fix",
+        "shopping-list": "pnpm env:root @ovchinnikov-lxs/shopping-list",
+        "shopping-list:build:gh:pages": "pnpm shopping-list build:gh:pages",
+        "build:gh-pages": "pnpm shopping-list:build:gh:pages"
     },
     "workspaces": [
-        "packages/*"
+        "packages/*",
+        "apps/*"
     ],
     "devDependencies": {
         "@antfu/eslint-config": "^2.20.0",
         "@nuxt/test-utils": "^3.13.1",
         "@vitest/coverage-v8": "^1.6.0",
         "@vue/test-utils": "^2.4.6",
+        "dotenv-cli": "^7.4.2",
         "eslint": "^9.4.0",
         "eslint-config-prettier": "^9.1.0",
         "happy-dom": "^14.12.0",

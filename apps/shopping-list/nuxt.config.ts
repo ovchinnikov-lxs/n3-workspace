@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     spaLoadingTemplate: true,
 
     app: {
-        baseURL: '/shopping-list/',
+        baseURL: process.env.SHOPPING_LIST_NUXT_APP_BASE_URL,
         head: {
             charset: 'utf-16',
             viewport: 'width=device-width, initial-scale=1',
@@ -52,32 +52,32 @@ export default defineNuxtConfig({
         manifest: {
             name: 'Shopping List',
             short_name: 'SL',
-            start_url: '/shopping-list/',
+            start_url: process.env.SHOPPING_LIST_NUXT_APP_BASE_URL,
             description: DESCRIPTION,
             background_color: '#ffffff',
             theme_color: '#3498db',
             display: 'standalone',
             lang: 'ru',
-            scope: '/shopping-list/',
+            scope: process.env.SHOPPING_LIST_NUXT_APP_BASE_URL,
             icons: [
                 {
-                    src: '/shopping-list/img/72x72.png',
+                    src: `${process.env.SHOPPING_LIST_NUXT_APP_BASE_URL}/shopping-list/img/72x72.png`,
                     sizes: '72x72',
                     type: 'image/png',
                 },
                 {
-                    src: '/shopping-list/img/96x96.png',
+                    src: `${process.env.SHOPPING_LIST_NUXT_APP_BASE_URL}/img/96x96.png`,
                     sizes: '96x96',
                     type: 'image/png',
                     purpose: 'any maskable',
                 },
                 {
-                    src: '/shopping-list/img/144x144.png',
+                    src: `${process.env.SHOPPING_LIST_NUXT_APP_BASE_URL}/img/144x144.png`,
                     sizes: '144x144',
                     type: 'image/png',
                 },
                 {
-                    src: '/shopping-list/img/512x512.png',
+                    src: `${process.env.SHOPPING_LIST_NUXT_APP_BASE_URL}/img/512x512.png`,
                     sizes: '512x512',
                     type: 'image/png',
                 },
@@ -93,8 +93,8 @@ export default defineNuxtConfig({
         [
             '@nuxtjs/supabase',
             {
-                url: 'https://rihjywbwdijfaikghqkm.supabase.co',
-                key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJpaGp5d2J3ZGlqZmFpa2docWttIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDgxNTU2MjksImV4cCI6MjAyMzczMTYyOX0.faSQlNX9u2hiEbUvLbMk_KiCkZdQd-yXhxKgIVtREh0',
+                url: process.env.SHOPPING_LIST_SUPABASE_URL,
+                key: process.env.SHOPPING_LIST_SUPABASE_KEY,
                 redirectOptions: {
                     login: '/login',
                     callback: '/confirm',
