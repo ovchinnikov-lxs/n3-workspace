@@ -16,6 +16,13 @@ jobs:
         with:
           node-version: "20"
           cache: "pnpm"
+      - name: "Create env file"
+        run: |
+              touch .env
+              echo SHOPPING_LIST_NUXT_APP_BASE_URL=${{ vars.SHOPPING_LIST_NUXT_APP_BASE_URL }} >> .env
+              echo SHOPPING_LIST_SUPABASE_URL=${{ vars.SHOPPING_LIST_SUPABASE_URL }} >> .env
+              echo SHOPPING_LIST_SUPABASE_KEY=${{ vars.SHOPPING_LIST_SUPABASE_KEY }} >> .env
+              cat .env
       # Pick your own package manager and build script
       - run: npm install -g pnpm
       - run: pnpm install
