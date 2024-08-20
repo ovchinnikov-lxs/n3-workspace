@@ -24,6 +24,7 @@ jobs:
             -   name: Create env file
                 run: |
                     touch .env
+                    echo PORTFOLIO_NUXT_APP_BASE_URL=${{ vars.PORTFOLIO_NUXT_APP_BASE_URL }} >> .env
                     echo SHOPPING_LIST_NUXT_APP_BASE_URL=${{ vars.SHOPPING_LIST_NUXT_APP_BASE_URL }} >> .env
                     echo SHOPPING_LIST_SUPABASE_URL=${{ vars.SHOPPING_LIST_SUPABASE_URL }} >> .env
                     echo SHOPPING_LIST_SUPABASE_KEY=${{ vars.SHOPPING_LIST_SUPABASE_KEY }} >> .env
@@ -34,6 +35,22 @@ jobs:
 
             -   name: Build Shopping List
                 run: pnpm shopping-list:build:gh:pages
+
+            -   name: Deploy Shopping List to GitHub Pages
+                uses: peaceiris/actions-gh-pages@v3
+                with:
+                    github_token: ${{ secrets.GITHUB_TOKEN }}
+                    publish_dir: ./apps/shopping-list/.output/public
+                    destination_dir: shopping-list
+
+            -   name: Build apps
+                run: pnpm build:gh-pages
+
+            -   name: Deploy Portfolio to GitHub Pages
+                uses: peaceiris/actions-gh-pages@v3
+                with:
+                    github_token: ${{ secrets.GITHUB_TOKEN }}
+                    publish_dir: ./apps/portfolio/.output/public
 
             -   name: Deploy Shopping List to GitHub Pages
                 uses: peaceiris/actions-gh-pages@v3

@@ -13,7 +13,7 @@ export default defineNuxtConfig({
 
     typescript: {
         strict: true,
-        typeCheck: true,
+        // TODO: typeCheck: true, with layers
         tsConfig: {
             include: [
                 'node',

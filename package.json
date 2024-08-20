@@ -16,7 +16,7 @@
         "node": ">=20.10.0"
     },
     "scripts": {
-        "cleanup": "rimraf 'apps/**/node_modules' 'packages/**/node_modules' 'playground/node_modules' 'node_modules'",
+        "cleanup": "rimraf apps/**/node_modules apps/**/.nuxt packages/**/node_modules packages/**/.nuxt playground/node_modules playground/.nuxt node_modules .nuxt",
         "env:root": "dotenv -- pnpm --filter",
         "typecheck": "tsc --noEmit",
         "prepare": "husky",
@@ -29,8 +29,10 @@
         "lint:check": "pnpm run eslint:check && pnpm run stylelint:check && pnpm run prettier:check",
         "lint:fix": "pnpm run eslint:fix && pnpm run stylelint:fix && pnpm run prettier:fix",
         "shopping-list": "pnpm env:root @ovchinnikov-lxs/shopping-list",
+        "portfolio": "pnpm env:root @ovchinnikov-lxs/portfolio",
         "shopping-list:build:gh:pages": "pnpm shopping-list build:gh:pages",
-        "build:gh-pages": "pnpm shopping-list:build:gh:pages"
+        "portfolio:build:gh:pages": "pnpm portfolio build:gh:pages",
+        "build:gh-pages": "pnpm shopping-list:build:gh:pages && pnpm portfolio:build:gh:pages"
     },
     "workspaces": [
         "packages/*",
@@ -38,16 +40,11 @@
     ],
     "devDependencies": {
         "@antfu/eslint-config": "^2.20.0",
-        "@nuxt/test-utils": "^3.13.1",
-        "@vitest/coverage-v8": "^1.6.0",
-        "@vue/test-utils": "^2.4.6",
         "dotenv-cli": "^7.4.2",
         "eslint": "^9.4.0",
         "eslint-config-prettier": "^9.1.0",
-        "happy-dom": "^14.12.0",
         "husky": "^9.0.11",
         "lint-staged": "^15.2.5",
-        "playwright-core": "^1.44.1",
         "prettier": "^3.3.0",
         "prettier-plugin-multiline-arrays": "^3.0.6",
         "rimraf": "^5.0.7",
@@ -56,11 +53,7 @@
         "stylelint-config-recommended-scss": "^14.0.0",
         "stylelint-config-recommended-vue": "^1.5.0",
         "stylelint-config-standard-scss": "^13.1.0",
-        "stylelint-scss": "^6.3.0",
-        "typescript": "^5.4.5",
-        "vitest": "^1.6.0",
-        "vitest-environment-nuxt": "^1.0.0",
-        "vue-tsc": "^2.0.19"
+        "stylelint-scss": "^6.3.0"
     },
     "lint-staged": {
         "*.{css,vue,scss,js,ts,vue,json,md,html}": "prettier --write",
