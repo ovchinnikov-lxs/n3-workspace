@@ -35,7 +35,7 @@ jobs:
             -   name: Build Shopping List
                 run: pnpm shopping-list:build:gh:pages
 
-            -   name: Deploy to GitHub Pages
+            -   name: Deploy Shopping List to GitHub Pages
                 uses: peaceiris/actions-gh-pages@v3
                 with:
                     github_token: ${{ secrets.GITHUB_TOKEN }}
