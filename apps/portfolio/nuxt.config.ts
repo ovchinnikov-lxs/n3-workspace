@@ -34,6 +34,7 @@ export default defineNuxtConfig({
                 iso: 'ru-RU',
             },
         ],
+        baseUrl: 'https://ovchinnikov-lxs.github.io/n3-workspace',
         defaultLocale: 'en',
         strategy: 'prefix_except_default',
         detectBrowserLanguage: {

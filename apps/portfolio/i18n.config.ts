@@ -67,7 +67,7 @@ export default defineI18nConfig(() => ({
                                 startDate: 'Октябрь 2023',
                                 endDate: 'По настоящее время',
                                 description:
-                                    '<ul>\n<li>Основные задачи:</li>\n<ul>\n<li>Проектирование и реализация новых интерфейсов и функционала.</li>\n<li>Оптимизация и поддержка существующего кода, исправление ошибок.</li>\n<li>Участие в разработке архитектуры веб-приложений.</li>\n<li>Оценка и декомпозиция проектных задач.</li>\n<li>Кроссбраузерная верстка.</li>\n</ul>\n<li>Завершил испытательный срок за 2 месяца, проанализировав текущие проекты и предложив рекомендации по улучшению качества кода и процессов.</li>\n<li>В течение 3 месяцев был наставником нового сотрудника, что привело к бонусу в размере 30% от зарплаты за успешное введение нового члена команды.</li>\n<li>Организовал онбординг и предоставлял поддержку при чтении кода.</li>\n<li>Через 6 месяцев стал заместителем руководителя отдела разработки в команде из 8 фронтенд-разработчиков.</li>\n<li>Провел полный рефакторинг основного проекта компании:</li>\n<ul>\n<li>Уменьшил размер бандла приложения с 1500 МБ до 500 КБ.</li>\n<li>Внедрил правильный рабочий процесс команды и журнал изменений для отслеживания крупных и мелких обновлений.</li>\n<li>Увеличил производительность сайта в 5 раз.</li>\n</ul>\n<li>На 8-м месяце работы был назначен лидером стратегического проекта, что подтвердило высокую оценку моей работы и показало стремление к развитию в компании.</li>\n</ul>',
+                                    '<ul>\n<li>Основные задачи: \n<ul>\n<li>Проектирование и реализация новых интерфейсов и функционала.</li>\n<li>Оптимизация и поддержка существующего кода, исправление ошибок.</li>\n<li>Участие в разработке архитектуры веб-приложений.</li>\n<li>Оценка и декомпозиция проектных задач.</li>\n<li>Кроссбраузерная верстка.</li>\n</ul></li>\n<li>Завершил испытательный срок за 2 месяца, проанализировав текущие проекты и предложив рекомендации по улучшению качества кода и процессов.</li>\n<li>В течение 3 месяцев был наставником нового сотрудника, что привело к бонусу в размере 30% от зарплаты за успешное введение нового члена команды.</li>\n<li>Организовал онбординг и предоставлял поддержку при чтении кода.</li>\n<li>Через 6 месяцев стал заместителем руководителя отдела разработки в команде из 8 фронтенд-разработчиков.</li>\n<li>Провел полный рефакторинг основного проекта компании:<ul>\n<li>Уменьшил размер бандла приложения с 1500 МБ до 500 КБ.</li>\n<li>Внедрил правильный рабочий процесс команды и журнал изменений для отслеживания крупных и мелких обновлений.</li>\n<li>Увеличил производительность сайта в 5 раз.</li>\n</ul>\n</li>\n<li>На 8-м месяце работы был назначен лидером стратегического проекта, что подтвердило высокую оценку моей работы и показало стремление к развитию в компании.</li>\n</ul>',
                             },
                         ],
                     },
@@ -195,24 +195,26 @@ export default defineI18nConfig(() => ({
                                 endDate: 'Present',
                                 description:
                                     '<ul>\n' +
-                                    '  <li>Main tasks:</li>\n' +
+                                    '  <li>Main tasks:' +
                                     '  <ul>\n' +
-                                    '    <li>Design and implementation of new interfaces and functionality.</li>\n' +
-                                    '    <li>Optimization and support of existing code, bug fixes.</li>\n' +
-                                    '    <li>Participation in the development of the architecture of web applications.</li>\n' +
-                                    '    <li>Assessment and decomposition of project tasks.</li>\n' +
-                                    '    <li>Performing cross-browser layout.</li>\n' +
-                                    '  </ul>\n' +
+                                    '     <li>Design and implementation of new interfaces and functionality.</li>\n' +
+                                    '     <li>Optimization and support of existing code, bug fixes.</li>\n' +
+                                    '     <li>Participation in the development of the architecture of web applications.</li>\n' +
+                                    '     <li>Assessment and decomposition of project tasks.</li>\n' +
+                                    '     <li>Performing cross-browser layout.</li>\n' +
+                                    '   </ul>\n' +
+                                    '  </li>\n' +
                                     '  <li>Completed the trial period in 2 months by analyzing current projects and providing recommendations for improving the quality of code and processes.</li>\n' +
                                     '  <li>For 3 months, he was a mentor to a new employee, which led to a bonus of 30% of the salary for the successful introduction of a new team member.</li>\n' +
                                     '  <li>Organized onboarding and provided support when reading the code.</li>\n' +
                                     '  <li>6 months later, he became deputy head of the development department in a team of 8 front-end developers.</li>\n' +
-                                    "  <li>Completed a complete refactoring of the company's lead project:</li>\n" +
+                                    "  <li>Completed a complete refactoring of the company's lead project:" +
                                     '  <ul>\n' +
                                     '    <li>Reduced the size of the application bundle from 1500 MB to 500 KB.</li>\n' +
                                     '    <li>Implemented a correct team workflow and change log to track major and minor updates.</li>\n' +
                                     '    <li>Increased the performance of the site by 5 times.</li>\n' +
                                     '  </ul>\n' +
+                                    '</li>\n' +
                                     '  <li>In the 8th month of work, I was appointed to a strategic project as a leader of the direction, which confirmed the high appreciation of my work and showed the desire for development in the company.</li>\n' +
                                     '</ul>',
                             },

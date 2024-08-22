@@ -43,6 +43,7 @@
                     <NuxtLinkLocale
                         to="/print"
                         target="_blank"
+                        :aria-label="`${'print-label'}`"
                         :class="$style.print"
                     >
                         <Icon name="uil:print" />
