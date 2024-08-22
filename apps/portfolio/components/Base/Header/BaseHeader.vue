@@ -3,9 +3,16 @@
         ref="refHeader"
         class="BaseHeader"
     >
-        <div :class="$style.wrapper">
+        <div
+            itemscope
+            itemtype="http://schema.org/Person"
+            :class="$style.wrapper"
+        >
             <div :class="$style.info">
-                <div :class="$style.title">
+                <div
+                    itemprop="jobTitle"
+                    :class="$style.title"
+                >
                     {{ $t('header.info.title') }}
                 </div>
 
@@ -16,6 +23,7 @@
                         :aria-label="item.id"
                         external
                         target="_blank"
+                        :title="item.id"
                         :to="item.to"
                         :class="$style.link"
                     >
@@ -43,6 +51,7 @@
                     <NuxtLinkLocale
                         to="/print"
                         target="_blank"
+                        :title="`${'print'}`"
                         :aria-label="`${'print-label'}`"
                         :class="$style.print"
                     >
@@ -55,12 +64,16 @@
                 <div :class="$style.imageWrapper">
                     <img
                         src="/img/avatar.webp"
+                        :title="$t('header.image.title')"
                         :alt="$t('header.image.alt')"
                         :class="$style.image"
                     />
                 </div>
 
-                <h1 :class="$style.fullName">
+                <h1
+                    itemprop="name"
+                    :class="$style.fullName"
+                >
                     {{ $t('header.fullName') }}
                 </h1>
             </div>

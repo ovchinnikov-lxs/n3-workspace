@@ -12,6 +12,8 @@ export default defineI18nConfig(() => ({
                     description:
                         'Изучите портфолио Александра Овчинникова, Senior Frontend Developer, специализирующегося на Vue.js, Nuxt.js и TypeScript. Откройте для себя проекты, навыки и историю трудоустройства.',
                     keywords: 'Александр Овчинников, Frontend Developer, Разработчик Vue.js, Эксперт по Nuxt.js, TypeScript, Веб-разработка, Портфолио, Старший разработчик',
+                    author: 'Александр Овчинников',
+                    publisher: 'Александр Овчинников',
                     og: {
                         title: 'Александр Овчинников - Senior Frontend Developer',
                         description: 'Откройте для себя профессиональное портфолио Александра Овчинникова, включающее проекты и экспертизу в Vue.js, Nuxt.js и TypeScript.',
@@ -34,6 +36,7 @@ export default defineI18nConfig(() => ({
                 },
                 image: {
                     alt: 'Изображение портфолио',
+                    title: 'Аватарка',
                 },
                 fullName: 'Александр Овчинников',
             },
@@ -128,6 +131,8 @@ export default defineI18nConfig(() => ({
                     description:
                         'Explore the portfolio of Aleksandr Ovchinnikov, a Senior Frontend Developer specializing in Vue.js, Nuxt.js, and TypeScript. Discover projects, skills, and employment history.',
                     keywords: 'Aleksandr Ovchinnikov, Frontend Developer, Vue.js Developer, Nuxt.js Expert, TypeScript, Web Development, Portfolio, Senior Developer',
+                    author: 'Aleksandr Ovchinnikov',
+                    publisher: 'Aleksandr Ovchinnikov',
                     og: {
                         title: 'Aleksandr Ovchinnikov - Senior Frontend Developer',
                         description: 'Discover the professional portfolio of Aleksandr Ovchinnikov, featuring projects and expertise in Vue.js, Nuxt.js, and TypeScript.',
@@ -151,6 +156,7 @@ export default defineI18nConfig(() => ({
                 },
                 image: {
                     alt: 'Portfolio image',
+                    title: 'Avatar',
                 },
                 fullName: 'Aleksandr Ovchinnikov',
             },

@@ -1,9 +1,17 @@
 <template>
-    <div class="IndexProjectsItem">
+    <div
+        itemscope
+        itemtype="http://schema.org/CreativeWork"
+        class="IndexProjectsItem"
+    >
         <div :class="$style.wrapper">
-            <h3 :class="$style.name">
+            <h3
+                itemprop="name"
+                :class="$style.name"
+            >
                 <NuxtLink
                     :to="source"
+                    :title="id"
                     external
                     target="_blank"
                     :class="$style.title"
@@ -22,7 +30,10 @@
                 />
             </div>
 
-            <div :class="$style.description">
+            <div
+                itemprop="description"
+                :class="$style.description"
+            >
                 {{ $t(`pages.index.projects.${id}.description`) }}
             </div>
 
@@ -34,6 +45,8 @@
                     v-for="(item, key) in links"
                     :key="key"
                     external
+                    itemprop="url"
+                    :title="$t(`pages.index.projects.links.${key}`)"
                     :to="item"
                     target="_blank"
                 >

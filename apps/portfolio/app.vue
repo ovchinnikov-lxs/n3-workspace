@@ -1,5 +1,9 @@
 <template>
-    <div :class="[$style.AppInstance, classList]">
+    <div
+        itemscope
+        itemtype="https://schema.org/WebSite"
+        :class="[$style.AppInstance, classList]"
+    >
         <NuxtPwaManifest />
 
         <main
@@ -29,7 +33,13 @@ useHead({
     htmlAttrs: () => ({
         ...i18nHead.value.htmlAttrs,
     }),
-    meta: () => [...i18nHead.value.meta],
+    meta: () => [
+        ...i18nHead.value.meta,
+        {
+            name: 'robots',
+            content: 'index, follow',
+        },
+    ],
     link: () => [
         ...i18nHead.value.link,
         {
@@ -47,7 +57,7 @@ useHead({
                 name: t('app.seo.og.script.name'),
                 jobTitle: t('app.seo.og.script.jobTitle'),
                 url: 'https://ovchinnikov-lxs.github.io/n3-workspace/',
-                image: '/img/avatar.webp',
+                image: 'https://ovchinnikov-lxs.github.io/n3-workspace/img/avatar.webp',
                 sameAs: [
                     'https://t.me/ovchinnikov_lxs',
                     'https://www.linkedin.com/in/alexander-ovchinnikov-4a569a23b',
@@ -68,15 +78,17 @@ useSeoMeta({
     title: () => t('app.seo.title'),
     description: () => t('app.seo.description'),
     keywords: () => t('app.seo.keywords'),
+    author: () => t('app.seo.author'),
+    publisher: () => t('app.seo.publisher'),
     ogTitle: () => t('app.seo.og.title'),
     ogDescription: () => t('app.seo.og.description'),
-    ogImage: '/img/avatar.webp',
+    ogImage: 'https://ovchinnikov-lxs.github.io/n3-workspace/img/avatar.webp',
     ogUrl: 'https://ovchinnikov-lxs.github.io/n3-workspace/',
     ogType: 'website',
     twitterCard: 'summary_large_image',
     twitterTitle: () => t('app.seo.twitter.title'),
     twitterDescription: () => t('app.seo.twitter.description'),
-    twitterImage: '/img/avatar.webp',
+    twitterImage: 'https://ovchinnikov-lxs.github.io/n3-workspace/img/avatar.webp',
 });
 
 onMounted(() => {
