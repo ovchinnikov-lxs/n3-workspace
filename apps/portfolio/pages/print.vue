@@ -1,5 +1,5 @@
 <template>
-    <div class="IndexPage">
+    <div class="PrintPage">
         <div :class="$style.wrapper">
             <Component
                 :is="value"
@@ -14,12 +14,26 @@
 <script setup lang="ts">
 import { IndexEmployment, IndexProfile, IndexProjects, IndexSkills } from '#components';
 
+definePageMeta({
+    isPrintPage: true,
+});
+
 const componentMap = new Map([
     ['profile', IndexProfile],
     ['skills', IndexSkills],
     ['employment', IndexEmployment],
     ['projects', IndexProjects],
 ]);
+
+onMounted(() => {
+    onNuxtReady(() => {
+        nextTick(() => {
+            setTimeout(() => {
+                window.print();
+            }, 100);
+        });
+    });
+});
 </script>
 
 <style lang="scss" module>

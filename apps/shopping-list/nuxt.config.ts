@@ -61,7 +61,7 @@ export default defineNuxtConfig({
             scope: process.env.SHOPPING_LIST_NUXT_APP_BASE_URL,
             icons: [
                 {
-                    src: `${process.env.SHOPPING_LIST_NUXT_APP_BASE_URL}/shopping-list/img/72x72.png`,
+                    src: `${process.env.SHOPPING_LIST_NUXT_APP_BASE_URL}/img/72x72.png`,
                     sizes: '72x72',
                     type: 'image/png',
                 },

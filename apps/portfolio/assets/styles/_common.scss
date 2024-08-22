@@ -20,7 +20,7 @@ $breakpoints: (
     $max: map.get($breakpoints, $name);
 
     @if $max {
-        @media only screen and (max-width: $max) {
+        @media only screen and (min-width: $max) {
             @content;
         }
     } @else {

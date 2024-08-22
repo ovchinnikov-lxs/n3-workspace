@@ -12,5 +12,13 @@
         "generate": "nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare"
+    },
+    "dependencies": {
+        "@nuxt/icon": "^1.4.7"
+    },
+    "devDependencies": {
+        "@iconify-json/logos": "^1.1.44",
+        "@iconify-json/uil": "^1.1.9",
+        "@iconify-json/vscode-icons": "^1.1.37"
     }
 }
