@@ -22,7 +22,14 @@ useHead({
     htmlAttrs: {
         ...i18nHead.value.htmlAttrs,
     },
-    link: [...(i18nHead.value.link || [])],
+    link: [
+        ...(i18nHead.value.link || []),
+        {
+            rel: 'icon',
+            type: 'image/x-icon',
+            href: `${useRuntimeConfig().app.baseURL}/favicon.ico`,
+        },
+    ],
     meta: [...(i18nHead.value.meta || [])],
 });
 
