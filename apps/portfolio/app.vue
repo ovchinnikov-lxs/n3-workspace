@@ -58,6 +58,18 @@ useHead({
                 "})(window,document,'script','dataLayer','GTM-KLDBHXW4');",
         },
         {
+            async: true,
+            src: 'https://www.googletagmanager.com/gtag/js?id=G-8BZP9D108T',
+        },
+        {
+            innerHTML:
+                '  window.dataLayer = window.dataLayer || [];\n' +
+                '  function gtag(){dataLayer.push(arguments);}\n' +
+                "  gtag('js', new Date());\n" +
+                '\n' +
+                "  gtag('config', 'G-8BZP9D108T');",
+        },
+        {
             type: 'application/ld+json',
             innerHTML: {
                 '@context': 'https://schema.org',
