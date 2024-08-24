@@ -19,6 +19,8 @@ export default defineNuxtConfig({
         },
     },
 
+    modules: ['@nuxt/icon', '@nuxtjs/sitemap'],
+
     i18n: {
         locales: [
             {
@@ -82,5 +84,8 @@ export default defineNuxtConfig({
         },
     },
 
-    modules: ['@nuxt/icon'],
+    site: {
+        url: `https://ovchinnikov-lxs.github.io${process.env.PORTFOLIO_NUXT_APP_BASE_URL}`,
+        name: 'Александр Овчинников - Senior Frontend Developer | Эксперт по Vue.js, Nuxt.js, TypeScript',
+    },
 });
