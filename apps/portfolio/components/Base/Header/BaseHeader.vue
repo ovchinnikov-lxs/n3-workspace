@@ -85,18 +85,21 @@
 function useHeaderHeight() {
     const refHeader = ref<HTMLDivElement>();
 
-    const { height } = useElementBounding(refHeader);
-    const cssVar = useCssVar('--ui-header-height', document.documentElement);
+    onMounted(() => {
+        const { height } = useElementBounding(refHeader);
+        const cssVar = useCssVar('--ui-header-height', document.documentElement);
 
-    watch(
-        height,
-        (val) => {
-            cssVar.value = `${val}px`;
-        },
-        {
-            immediate: true,
-        },
-    );
+        watch(
+            height,
+            (val) => {
+                cssVar.value = `${val}px`;
+            },
+            {
+                immediate: true,
+            },
+        );
+    });
+
     return {
         refHeader,
     };

@@ -7,10 +7,6 @@ const currentDir = dirname(fileURLToPath(import.meta.url));
 export default defineNuxtConfig({
     extends: ['../../packages/dev-kit-layer'],
 
-    ssr: false,
-
-    spaLoadingTemplate: true,
-
     css: [
         join(currentDir, './assets/styles/_bundle.scss'),
     ],
