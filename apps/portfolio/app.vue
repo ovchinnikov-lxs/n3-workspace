@@ -43,6 +43,10 @@ useHead({
             name: 'robots',
             content: 'index, follow',
         },
+        {
+            name: 'yandex-verification',
+            content: '66831ef4a1a5e12d',
+        },
     ],
     link: () => [
         ...i18nHead.value.link,
