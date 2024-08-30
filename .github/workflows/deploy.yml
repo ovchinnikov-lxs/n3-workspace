@@ -28,6 +28,8 @@ jobs:
                     echo SHOPPING_LIST_NUXT_APP_BASE_URL=${{ vars.SHOPPING_LIST_NUXT_APP_BASE_URL }} >> .env
                     echo SHOPPING_LIST_SUPABASE_URL=${{ vars.SHOPPING_LIST_SUPABASE_URL }} >> .env
                     echo SHOPPING_LIST_SUPABASE_KEY=${{ vars.SHOPPING_LIST_SUPABASE_KEY }} >> .env
+                    echo CONVERTER_NUXT_APP_BASE_URL=${{ vars.CONVERTER_NUXT_APP_BASE_URL }} >> .env
+                    echo CONVERTER_NUXT_API_BASE=${{ vars.CONVERTER_NUXT_API_BASE }} >> .env
                     cat .env
 
             -   name: Install dependencies
@@ -48,3 +50,10 @@ jobs:
                     github_token: ${{ secrets.GITHUB_TOKEN }}
                     publish_dir: ./apps/shopping-list/.output/public
                     destination_dir: shopping-list
+
+            -   name: Deploy Converter to GitHub Pages
+                uses: peaceiris/actions-gh-pages@v3
+                with:
+                    github_token: ${{ secrets.GITHUB_TOKEN }}
+                    publish_dir: ./apps/converter/.output/public
+                    destination_dir: converter

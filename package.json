@@ -30,9 +30,11 @@
         "lint:fix": "pnpm run eslint:fix && pnpm run stylelint:fix && pnpm run prettier:fix",
         "shopping-list": "pnpm env:root @ovchinnikov-lxs/shopping-list",
         "portfolio": "pnpm env:root @ovchinnikov-lxs/portfolio",
+        "converter": "pnpm env:root @ovchinnikov-lxs/converter",
         "shopping-list:build:gh:pages": "pnpm shopping-list build:gh:pages",
         "portfolio:build:gh:pages": "pnpm portfolio build:gh:pages",
-        "build:gh-pages": "pnpm shopping-list:build:gh:pages && pnpm portfolio:build:gh:pages"
+        "converter:build:gh:pages": "pnpm converter build:gh:pages",
+        "build:gh-pages": "pnpm shopping-list:build:gh:pages && pnpm portfolio:build:gh:pages && pnpm converter:build:gh:pages"
     },
     "workspaces": [
         "packages/*",

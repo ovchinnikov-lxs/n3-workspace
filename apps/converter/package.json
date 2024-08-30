@@ -1,0 +1,25 @@
+{
+    "name": "@ovchinnikov-lxs/converter",
+    "version": "0.0.0",
+    "description": "",
+    "author": "",
+    "license": "ISC",
+    "main": "./nuxt.config.ts",
+    "scripts": {
+        "build": "nuxt build",
+        "build:gh:pages": "npx nuxt build --preset github_pages",
+        "dev": "nuxt dev --host",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "dependencies": {
+        "@pinia/nuxt": "^0.5.1",
+        "@primevue/themes": "^4.0.5",
+        "pinia": "^2.1.7",
+        "primevue": "^4.0.5"
+    },
+    "devDependencies": {
+        "@primevue/nuxt-module": "^4.0.5"
+    }
+}
