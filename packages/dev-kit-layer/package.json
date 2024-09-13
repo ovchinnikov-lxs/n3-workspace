@@ -31,7 +31,7 @@
         "swiper": "^11.1.4"
     },
     "devDependencies": {
-        "@nuxt/fonts": "^0.7.2",
+        "@nuxt/fonts": "^0.8.0",
         "@nuxt/test-utils": "^3.13.1",
         "@nuxtjs/i18n": "^8.3.1",
         "@types/animejs": "^3.1.12",
