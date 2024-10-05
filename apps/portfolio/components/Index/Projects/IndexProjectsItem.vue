@@ -33,9 +33,8 @@
             <div
                 itemprop="description"
                 :class="$style.description"
-            >
-                {{ $t(`pages.index.projects.${id}.description`) }}
-            </div>
+                v-html="$t(`pages.index.projects.${id}.description`)"
+            ></div>
 
             <div
                 v-if="links"

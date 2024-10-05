@@ -30,6 +30,14 @@ const projects = [
         tags: [PROJECTS_TAGS.IN_WORKING, PROJECTS_TAGS.FRONTEND],
     },
     {
+        id: 'n3-workspace/converter',
+        source: 'https://github.com/ovchinnikov-lxs/n3-workspace/tree/master/apps/converter',
+        links: {
+            homepage: 'https://ovchinnikov-lxs.github.io/n3-workspace/converter',
+        },
+        tags: [PROJECTS_TAGS.COMPLETE, PROJECTS_TAGS.FRONTEND, PROJECTS_TAGS.TEST],
+    },
+    {
         id: 'n3-workspace/shopping-list',
         source: 'https://github.com/ovchinnikov-lxs/n3-workspace/tree/master/apps/shopping-list',
         links: {

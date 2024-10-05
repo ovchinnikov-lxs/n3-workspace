@@ -25,11 +25,11 @@ export default defineNuxtConfig({
         locales: [
             {
                 code: 'en',
-                iso: 'en-US',
+                language: 'en-US',
             },
             {
                 code: 'ru',
-                iso: 'ru-RU',
+                language: 'ru-RU',
             },
         ],
         baseUrl: 'https://ovchinnikov-lxs.github.io/',
@@ -88,4 +88,6 @@ export default defineNuxtConfig({
         url: `https://ovchinnikov-lxs.github.io${process.env.PORTFOLIO_NUXT_APP_BASE_URL}`,
         name: 'Александр Овчинников - Senior Frontend Developer | Эксперт по Vue.js, Nuxt.js, TypeScript',
     },
+
+    compatibilityDate: '2024-10-05',
 });

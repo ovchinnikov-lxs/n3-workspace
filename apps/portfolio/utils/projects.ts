@@ -6,4 +6,5 @@ export const PROJECTS_TAGS = {
     FRONTEND: 'frontend',
     BACKEND: 'backend',
     DESKTOP_ONLY: 'desktop-only',
+    TEST: 'test',
 } as const;

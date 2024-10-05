@@ -32,11 +32,11 @@ export default defineNuxtConfig({
         locales: [
             {
                 code: 'ru',
-                iso: 'ru-RU',
+                language: 'ru-RU',
             },
             {
                 code: 'en',
-                iso: 'en-US',
+                language: 'en-US',
             },
         ],
         defaultLocale: 'ru',

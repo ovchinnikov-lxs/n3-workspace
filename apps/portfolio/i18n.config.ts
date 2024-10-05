@@ -44,7 +44,7 @@ export default defineI18nConfig(() => ({
                 index: {
                     profile: {
                         title: 'О себе',
-                        text: 'Я энергичный и целеустремленный профессионал, всегда стремящийся к совершенству в своей работе. В WinTech и Idaproject я улучшил качество кода, увеличил производительность проектов и вдохновил команды на внедрение современных практик разработки. У меня есть навыки рефакторинга, наставничества и управления, что позволяет мне повышать уровень всей команды и добиваться высоких результатов. Моя мотивация — это постоянное развитие и улучшение, как личное, так и команды.',
+                        text: 'Я Senior Frontend Developer с опытом проектирования и внедрения архитектур веб-приложений. Увлекаюсь поиском эффективных решений и повышением производительности. Мой путь включает значительный вклад в улучшение кода, рефакторинг и успешное наставничество в командах WinTech и Idaproject. Всегда нацелен на высокое качество кода, наращивание технического потенциала команды и внедрение лучших практик разработки.',
                     },
                     skills: {
                         title: 'Навыки',
@@ -70,7 +70,7 @@ export default defineI18nConfig(() => ({
                                 startDate: 'Октябрь 2023',
                                 endDate: 'По настоящее время',
                                 description:
-                                    '<ul>\n<li>Основные задачи: \n<ul>\n<li>Проектирование и реализация новых интерфейсов и функционала.</li>\n<li>Оптимизация и поддержка существующего кода, исправление ошибок.</li>\n<li>Участие в разработке архитектуры веб-приложений.</li>\n<li>Оценка и декомпозиция проектных задач.</li>\n<li>Кроссбраузерная верстка.</li>\n</ul></li>\n<li>Завершил испытательный срок за 2 месяца, проанализировав текущие проекты и предложив рекомендации по улучшению качества кода и процессов.</li>\n<li>В течение 3 месяцев был наставником нового сотрудника, что привело к бонусу в размере 30% от зарплаты за успешное введение нового члена команды.</li>\n<li>Организовал онбординг и предоставлял поддержку при чтении кода.</li>\n<li>Через 6 месяцев стал заместителем руководителя отдела разработки в команде из 8 фронтенд-разработчиков.</li>\n<li>Провел полный рефакторинг основного проекта компании:<ul>\n<li>Уменьшил размер бандла приложения с 1500 МБ до 500 КБ.</li>\n<li>Внедрил правильный рабочий процесс команды и журнал изменений для отслеживания крупных и мелких обновлений.</li>\n<li>Увеличил производительность сайта в 5 раз.</li>\n</ul>\n</li>\n<li>На 8-м месяце работы был назначен лидером стратегического проекта, что подтвердило высокую оценку моей работы и показало стремление к развитию в компании.</li>\n</ul>',
+                                    '<ul>\n<li>Основные задачи: \n<ul>\n<li>Проектирование и реализация новых интерфейсов и функционала.</li>\n<li>Оптимизация и поддержка существующего кода, исправление ошибок.</li>\n<li>Участие в разработке архитектуры веб-приложений.</li>\n<li>Оценка и декомпозиция проектных задач.</li>\n<li>Кроссбраузерная верстка.</li>\n</ul></li>\n<li>Досрочно завершил испытательный срок проанализировав текущие проекты и предложив рекомендации по улучшению качества кода и процессов.</li>\n<li>Был наставником нового сотрудника, что привело к успешному введению нового члена команды.</li>\n<li>Организовал онбординг и предоставлял поддержку при чтении кода.</li>\n<li>Был опыт заместителя руководителя отдела разработки в команде из 8 фронтенд-разработчиков.</li>\n<li>Провел полный рефакторинг основного проекта компании:<ul>\n<li>Уменьшил размер бандла приложения с 1500 МБ до 500 КБ.</li>\n<li>Внедрил правильный рабочий процесс команды и журнал изменений для отслеживания крупных и мелких обновлений.</li>\n<li>Увеличил производительность сайта в 5 раз.</li>\n</ul>\n</li>\n<li>Был назначен лидером стратегического проекта, что подтвердило высокую оценку моей работы и показало стремление к развитию в компании.</li>\n</ul>',
                             },
                         ],
                     },
@@ -84,6 +84,7 @@ export default defineI18nConfig(() => ({
                             frontend: 'Фронтенд',
                             backend: 'Бэкенд',
                             'desktop-only': 'Только для десктопа',
+                            test: 'Тестовое задание',
                         },
                         links: {
                             homepage: 'Смотреть',
@@ -91,34 +92,43 @@ export default defineI18nConfig(() => ({
                         },
                         description: 'Проекты, которые я создал или поддерживаю.',
                         'n3-workspace': {
-                            description: 'Моно-репозиторий для всех моих проектов и утилит на Nuxt, этот сайт реализован здесь',
+                            description: 'Моно-репозиторий для всех моих проектов на Nuxt. Этот сайт также реализован на его основе.',
+                        },
+                        'n3-workspace/converter': {
+                            description:
+                                '<p dir="auto">Это одностраничное приложение (SPA) для конвертации валют, реализованное с использованием фреймворка Nuxt 3 для одного из тестового задания. Приложение включает две страницы:</p>' +
+                                '<ol dir="auto">\n' +
+                                '<li><strong>Главная</strong>: Отображает курсы валют по отношению к основной валюте сайта.</li>\n' +
+                                '<li><strong>Конвертация</strong>: Форма для конвертации валют с возможностью выбора валюты и автоматическим пересчетом значений.</li>\n' +
+                                '</ol>' +
+                                'С детальной информацией можно ознакомится в README приложения',
                         },
                         'n3-workspace/shopping-list': {
-                            description: 'Список покупок для создания и совместного использования',
+                            description: 'Список покупок для создания и совместного использования с интеграцией Supabase для базы данных.',
                         },
                         'n3-workspace/dev-kit-layer': {
-                            description: 'Слой Nuxt 3 с компонентами без стилей и полезными модулями, плагинами и т.д. для меня',
+                            description: 'Слой Nuxt 3 с набором утилит, компонентов и модулей для быстрого старта проектов.',
                         },
                         'task-trackers': {
-                            description: 'Моно-репозиторий с трекерами задач на всех фреймворках, которые я знаю или хочу изучить',
+                            description: 'Моно-репозиторий с трекерами задач на различных фреймворках для изучения и тестирования возможностей.',
                         },
                         'groom-crm': {
-                            description: 'Простая CRM для салонов груминга',
+                            description: 'Простая CRM для управления и учета клиентов в салонах груминга.',
                         },
                         portfolio_gallery: {
-                            description: 'Пример моей работы',
+                            description: 'Примеры моих работ, отражающие дизайн и функциональные возможности моих проектов.',
                         },
                         'web-layout-practice': {
-                            description: 'Добавляю различные практики верстки, чтобы расширить свои горизонты',
+                            description: 'Практические примеры различных методов и подходов верстки для расширения знаний и навыков.',
                         },
                         'nuxt3-template': {
-                            description: 'Шаблон репозитория с настройкой Nuxt 3',
+                            description: 'Шаблон проекта на Nuxt 3 с готовыми настройками для быстрого старта разработки.',
                         },
                         'todo-back': {
-                            description: "Бэкенд для pet-проекта 'Список дел'",
+                            description: "Бэкенд для проекта 'Список дел', реализованный на Nest.js.",
                         },
                         'todo-front': {
-                            description: "Фронтенд для pet-проекта 'Список дел'",
+                            description: "Фронтенд для проекта 'Список дел'.",
                         },
                     },
                 },
@@ -127,53 +137,51 @@ export default defineI18nConfig(() => ({
         en: {
             app: {
                 seo: {
-                    title: 'Aleksandr Ovchinnikov - Senior Frontend Developer | Vue.js, Nuxt.js, TypeScript Expert',
+                    title: 'Alexander Ovchinnikov - Senior Frontend Developer | Vue.js, Nuxt.js, TypeScript Expert',
                     description:
-                        'Explore the portfolio of Aleksandr Ovchinnikov, a Senior Frontend Developer specializing in Vue.js, Nuxt.js, and TypeScript. Discover projects, skills, and employment history.',
-                    keywords: 'Aleksandr Ovchinnikov, Frontend Developer, Vue.js Developer, Nuxt.js Expert, TypeScript, Web Development, Portfolio, Senior Developer',
-                    author: 'Aleksandr Ovchinnikov',
-                    publisher: 'Aleksandr Ovchinnikov',
+                        'Explore the portfolio of Alexander Ovchinnikov, Senior Frontend Developer specializing in Vue.js, Nuxt.js, and TypeScript. Discover his projects, skills, and career history.',
+                    keywords: 'Alexander Ovchinnikov, Frontend Developer, Vue.js Developer, Nuxt.js Expert, TypeScript, Web Development, Portfolio, Senior Developer',
+                    author: 'Alexander Ovchinnikov',
+                    publisher: 'Alexander Ovchinnikov',
                     og: {
-                        title: 'Aleksandr Ovchinnikov - Senior Frontend Developer',
-                        description: 'Discover the professional portfolio of Aleksandr Ovchinnikov, featuring projects and expertise in Vue.js, Nuxt.js, and TypeScript.',
+                        title: 'Alexander Ovchinnikov - Senior Frontend Developer',
+                        description: 'Discover the professional portfolio of Alexander Ovchinnikov, showcasing his expertise and projects in Vue.js, Nuxt.js, and TypeScript.',
                         script: {
-                            name: 'Aleksandr Ovchinnikov',
+                            name: 'Alexander Ovchinnikov',
                             jobTitle: 'Senior Frontend Developer',
                             alumniOf: 'Network',
                             knowsAbout: 'Frontend Development, Vue.js, Nuxt.js, TypeScript',
                         },
                     },
                     twitter: {
-                        title: 'Aleksandr Ovchinnikov - Senior Frontend Developer',
-                        description: 'Explore the portfolio and projects of Aleksandr Ovchinnikov, an expert in Vue.js, Nuxt.js, and TypeScript.',
+                        title: 'Alexander Ovchinnikov - Senior Frontend Developer',
+                        description: 'Explore the portfolio and projects of Alexander Ovchinnikov, an expert in Vue.js, Nuxt.js, and TypeScript.',
                     },
                 },
             },
-
             header: {
                 info: {
                     title: 'Senior Frontend Developer',
                 },
                 image: {
-                    alt: 'Portfolio image',
+                    alt: 'Portfolio Image',
                     title: 'Avatar',
                 },
-                fullName: 'Aleksandr Ovchinnikov',
+                fullName: 'Alexander Ovchinnikov',
             },
-
             pages: {
                 index: {
                     profile: {
-                        title: 'Profile',
-                        text: 'I am an energetic and purposeful professional, always striving for excellence in my work. At WinTech and Idaproject, I improved code quality, increased project productivity, and inspired teams to implement modern development practices. I have refactoring, mentoring and management skills, which allows me to raise the level of the entire team and achieve high results. My motivation is constant development and improvement, both personal and team.',
+                        title: 'About Me',
+                        text: 'I am a Senior Frontend Developer with extensive experience in designing and implementing web application architectures. I am passionate about finding efficient solutions and enhancing performance. My journey includes significant contributions in code improvement, refactoring, and successful mentorship at WinTech and Idaproject. I am always focused on delivering high-quality code, enhancing the technical capabilities of the team, and implementing best development practices.',
                     },
                     skills: {
                         title: 'Skills',
-                        description: 'The skills and tools that I use in my daily work',
+                        description: 'Skills and tools that I use in my daily work.',
                     },
                     employment: {
-                        title: 'Employment history',
-                        amount: 'The total experience more than {amount} years',
+                        title: 'Work Experience',
+                        amount: 'Total experience is more than {amount} years',
                         list: [
                             {
                                 title: 'Vue Frontend Developer',
@@ -182,16 +190,7 @@ export default defineI18nConfig(() => ({
                                 startDate: 'September 2020',
                                 endDate: 'September 2023',
                                 description:
-                                    '<ul>\n' +
-                                    '  <li>Worked in a small team: 3 front-end developers, 2 backend developers, a lead and a project manager.</li>\n' +
-                                    '  <li>Used Vue 2, Nuxt.js, JavaScript, TypeScript to create a multifunctional system for developers.</li>\n' +
-                                    '  <li>Ensured the purity and readability of the code by implementing and maintaining standards using ESLint and Stylelint.</li>\n' +
-                                    '  <li>Developed visual selection of objects in project images using SVG and Canvas.</li>\n' +
-                                    '  <li>Created a checkerboard of rooms with the functionality of selecting objects related to other sections of the system.</li>\n' +
-                                    '  <li>Participated in the creation of more than 600 unique blocks for the website builder, implemented content editing with dynamic forms.</li>\n' +
-                                    '  <li>Supported and developed internal libraries, participated in their releases.</li>\n' +
-                                    '  <li>Ensured the stability and quality of releases in production, sometimes acting as a team leader.</li>\n' +
-                                    '</ul>',
+                                    '<ul>\n<li>Worked in a small team: 3 frontend developers, 2 backend developers, a lead, and a project manager.</li>\n<li>Used Vue 2, Nuxt.js, JavaScript, and TypeScript to create a multifunctional system for developers.</li>\n<li>Ensured code quality and readability by implementing and maintaining standards using ESLint and Stylelint.</li>\n<li>Developed a visual selection of project objects using SVG and Canvas.</li>\n<li>Created a chessboard-like layout for selecting objects connected to other sections of the system.</li>\n<li>Contributed to the creation of over 600 unique blocks for the website builder, enabling content editing through dynamic forms.</li>\n<li>Supported and developed internal libraries, participating in their releases.</li>\n<li>Ensured stability and quality of production releases, sometimes taking on the role of a team lead.</li>\n</ul>',
                             },
                             {
                                 title: 'Vue Frontend Developer',
@@ -200,29 +199,7 @@ export default defineI18nConfig(() => ({
                                 startDate: 'October 2023',
                                 endDate: 'Present',
                                 description:
-                                    '<ul>\n' +
-                                    '  <li>Main tasks:' +
-                                    '  <ul>\n' +
-                                    '     <li>Design and implementation of new interfaces and functionality.</li>\n' +
-                                    '     <li>Optimization and support of existing code, bug fixes.</li>\n' +
-                                    '     <li>Participation in the development of the architecture of web applications.</li>\n' +
-                                    '     <li>Assessment and decomposition of project tasks.</li>\n' +
-                                    '     <li>Performing cross-browser layout.</li>\n' +
-                                    '   </ul>\n' +
-                                    '  </li>\n' +
-                                    '  <li>Completed the trial period in 2 months by analyzing current projects and providing recommendations for improving the quality of code and processes.</li>\n' +
-                                    '  <li>For 3 months, he was a mentor to a new employee, which led to a bonus of 30% of the salary for the successful introduction of a new team member.</li>\n' +
-                                    '  <li>Organized onboarding and provided support when reading the code.</li>\n' +
-                                    '  <li>6 months later, he became deputy head of the development department in a team of 8 front-end developers.</li>\n' +
-                                    "  <li>Completed a complete refactoring of the company's lead project:" +
-                                    '  <ul>\n' +
-                                    '    <li>Reduced the size of the application bundle from 1500 MB to 500 KB.</li>\n' +
-                                    '    <li>Implemented a correct team workflow and change log to track major and minor updates.</li>\n' +
-                                    '    <li>Increased the performance of the site by 5 times.</li>\n' +
-                                    '  </ul>\n' +
-                                    '</li>\n' +
-                                    '  <li>In the 8th month of work, I was appointed to a strategic project as a leader of the direction, which confirmed the high appreciation of my work and showed the desire for development in the company.</li>\n' +
-                                    '</ul>',
+                                    "<ul>\n<li>Main tasks: \n<ul>\n<li>Design and implement new interfaces and functionality.</li>\n<li>Optimize and maintain existing code, fix bugs.</li>\n<li>Participate in web application architecture development.</li>\n<li>Estimate and decompose project tasks.</li>\n<li>Cross-browser layout implementation.</li>\n</ul></li>\n<li>Completed the probation period early by analyzing current projects and providing recommendations for code and process quality improvement.</li>\n<li>Mentored a new employee, successfully integrating them into the team.</li>\n<li>Organized onboarding and provided support in code review.</li>\n<li>Acted as deputy head of the development department in a team of 8 frontend developers.</li>\n<li>Conducted a full refactoring of the company's main project:<ul>\n<li>Reduced the application bundle size from 1500 MB to 500 KB.</li>\n<li>Introduced a proper team workflow and a changelog for tracking major and minor updates.</li>\n<li>Increased website performance by 5 times.</li>\n</ul>\n</li>\n<li>Appointed as the leader of a strategic project, confirming high appreciation of my work and demonstrating a desire for growth within the company.</li>\n</ul>",
                             },
                         ],
                     },
@@ -232,45 +209,55 @@ export default defineI18nConfig(() => ({
                             'in-working': 'In Progress',
                             complete: 'Completed',
                             'need-to-actualize': 'Needs Update',
-                            old: 'Old',
+                            old: 'Outdated',
                             frontend: 'Frontend',
                             backend: 'Backend',
                             'desktop-only': 'Desktop Only',
+                            test: 'Test Task',
                         },
                         links: {
                             homepage: 'View',
                             design: 'Design',
                         },
-                        description: 'Projects that I created or maintaining.',
+                        description: 'Projects that I have created or maintained.',
                         'n3-workspace': {
-                            description: 'A mono-repository for all my projects and utilities on Nuxt, this site implemented here',
+                            description: 'A monorepository for all my projects based on Nuxt. This site is also built on it.',
+                        },
+                        'n3-workspace/converter': {
+                            description:
+                                '<p>This is a single-page application (SPA) for currency conversion, implemented using the Nuxt 3 framework as part of a test task. The application includes two pages:</p>' +
+                                '<ol>\n' +
+                                "<li><strong>Homepage</strong>: Displays currency rates relative to the site's main currency.</li>\n" +
+                                '<li><strong>Conversion</strong>: A form for converting currencies with the option to select a currency and automatic value recalculation.</li>\n' +
+                                '</ol>' +
+                                "More details can be found in the application's README.",
                         },
                         'n3-workspace/shopping-list': {
-                            description: 'Shopping list for create and share',
+                            description: 'A shopping list application for creating and sharing with Supabase database integration.',
                         },
                         'n3-workspace/dev-kit-layer': {
-                            description: 'Nuxt 3 layer with styleless components and usefull modules, plugins etc for me',
+                            description: 'Nuxt 3 layer with a set of utilities, components, and modules for quick project start.',
                         },
                         'task-trackers': {
-                            description: 'Mono repo with task trackers on all the frameworks that I know or want to know',
+                            description: 'Monorepository with task trackers on various frameworks for learning and testing capabilities.',
                         },
                         'groom-crm': {
-                            description: "it's a simple crm for grooming salons",
+                            description: 'A simple CRM for managing and keeping track of clients in grooming salons.',
                         },
                         portfolio_gallery: {
-                            description: 'Example of my work',
+                            description: 'Examples of my work showcasing the design and functionality of my projects.',
                         },
                         'web-layout-practice': {
-                            description: 'I add various layout practices to broaden my horizons',
+                            description: 'Practical examples of various layout methods and approaches to enhance knowledge and skills.',
                         },
                         'nuxt3-template': {
-                            description: 'Repository template with nuxt 3 setup',
+                            description: 'Nuxt 3 project template with ready-to-use settings for quick development start.',
                         },
                         'todo-back': {
-                            description: 'Backend part for pet todo',
+                            description: "Backend for the 'To-Do List' project implemented in Nest.js.",
                         },
                         'todo-front': {
-                            description: 'Frontend part for pet todo',
+                            description: "Frontend for the 'To-Do List' project.",
                         },
                     },
                 },

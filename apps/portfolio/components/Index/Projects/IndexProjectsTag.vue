@@ -38,6 +38,7 @@ const styleList = computed(() => ({
     --color-frontend: #9b2226;
     --color-backend: #3a506b;
     --color-desktop-only: #00509d;
+    --color-test: #28b20d;
 
     --current-color: var(--color-in-working);
 }
