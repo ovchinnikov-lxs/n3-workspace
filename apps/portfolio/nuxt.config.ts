@@ -84,12 +84,6 @@ export default defineNuxtConfig({
         },
     },
 
-    fonts: {
-        assets: {
-            prefix: process.env.IS_DEVELOPMENT ? '/_fonts/' : `${process.env.PORTFOLIO_NUXT_APP_BASE_URL}_fonts/`,
-        },
-    },
-
     site: {
         url: `https://ovchinnikov-lxs.github.io${process.env.PORTFOLIO_NUXT_APP_BASE_URL}`,
         name: 'Александр Овчинников - Senior Frontend Developer | Эксперт по Vue.js, Nuxt.js, TypeScript',
