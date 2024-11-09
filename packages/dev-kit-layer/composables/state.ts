@@ -1,5 +1,5 @@
-import type { IUiStateProps } from '../types/composables/state';
-import type { TUiClassList } from '../types';
+import type { IUiStateProps } from '#dev-kit-layer/types/composables/state';
+import type { TUiClassList } from '#dev-kit-layer/types';
 
 export function useUiState(props: IUiStateProps) {
     const stateClassList = computed<TUiClassList>(() => [

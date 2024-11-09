@@ -1,5 +1,5 @@
-import type { TUiClassList } from '../types';
-import type { IUiColorProps } from '../types/composables/color';
+import type { TUiClassList } from '#dev-kit-layer/types';
+import type { IUiColorProps } from '#dev-kit-layer/types/composables/color';
 
 export function useUiColor(props: IUiColorProps) {
     const colorClassList = computed<TUiClassList>(() => [

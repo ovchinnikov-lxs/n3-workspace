@@ -16,7 +16,7 @@
         "node": ">=20.10.0"
     },
     "scripts": {
-        "cleanup": "rimraf apps/**/node_modules apps/**/.nuxt packages/**/node_modules packages/**/.nuxt playground/node_modules playground/.nuxt node_modules .nuxt",
+        "cleanup": "rimraf apps/**/node_modules apps/**/.nuxt packages/**/node_modules playground/node_modules playground/.nuxt node_modules .nuxt",
         "env:root": "dotenv -- pnpm --filter",
         "typecheck": "tsc --noEmit",
         "prepare": "husky",

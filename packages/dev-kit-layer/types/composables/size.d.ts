@@ -1,4 +1,4 @@
-import type { TUiSize } from '../index';
+import type { TUiSize } from '#dev-kit-layer/index';
 
 export interface IUiSizeProps {
     /**

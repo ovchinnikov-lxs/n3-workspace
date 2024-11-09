@@ -1,5 +1,5 @@
-import type { IUiSizeProps } from '../types/composables/size';
-import type { TUiClassList } from '../types';
+import type { IUiSizeProps } from '#dev-kit-layer/types/composables/size';
+import type { TUiClassList } from '#dev-kit-layer/types';
 
 export function useUiSize(props: IUiSizeProps) {
     const sizeClassList = computed<TUiClassList>(() => [

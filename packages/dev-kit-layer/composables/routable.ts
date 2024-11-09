@@ -1,5 +1,5 @@
-import type { IUiRoutableProps } from '../types/composables/routable';
-import type { TUiClassList } from '../types';
+import type { IUiRoutableProps } from '#dev-kit-layer/types/composables/routable';
+import type { TUiClassList } from '#dev-kit-layer/types';
 import { LazyNuxtLinkLocale } from '#components';
 
 export function useUiRoutable(props: IUiRoutableProps) {

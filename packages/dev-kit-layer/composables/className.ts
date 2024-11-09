@@ -1,5 +1,5 @@
-import type { TUiClassList } from '../types';
-import type { IUiClassNameProps } from '../types/composables/className';
+import type { TUiClassList } from '#dev-kit-layer/types';
+import type { IUiClassNameProps } from '#dev-kit-layer/types/composables/className';
 
 export function useUiClassName(props: IUiClassNameProps) {
     const DEFAULT_PREFIX = 'Ui';
