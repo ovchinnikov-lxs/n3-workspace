@@ -49,8 +49,8 @@
                     </select>
 
                     <a
-                        :href="`/print/${i18n.locale.value}.pdf`"
-                        :download="$t('app.pdfFileName')"
+                        :href="`${baseURL}print/${$t('app.pdfFileName')}`"
+                        target="_blank"
                         :title="$t('app.pdfFileName')"
                         :aria-label="$t('app.pdfFileName')"
                         :class="$style.print"
@@ -151,6 +151,9 @@ function useLocalSwitch() {
     };
 }
 
+const {
+    app: { baseURL },
+} = useRuntimeConfig();
 const { refHeader } = useHeaderHeight();
 const { socialList } = useSocialList();
 const { i18n, onChangeLocale } = useLocalSwitch();
