@@ -29,6 +29,7 @@ export default defineI18nConfig(() => ({
                         description: 'Изучите портфолио и проекты Александра Овчинникова, эксперта в Vue.js, Nuxt.js и TypeScript.',
                     },
                 },
+                pdfFileName: 'Портфолио-Александр_Овчинников-Senior_Frontend_Developer.pdf',
             },
             header: {
                 info: {
@@ -199,6 +200,7 @@ export default defineI18nConfig(() => ({
                         description: 'Explore the portfolio and projects of Alexander Ovchinnikov, expert in Vue.js, Nuxt.js, and TypeScript.',
                     },
                 },
+                pdfFileName: 'Portfolio-Alexander_Ovchinnikov-Senior_Frontend_Developer.pdf',
             },
             header: {
                 info: {

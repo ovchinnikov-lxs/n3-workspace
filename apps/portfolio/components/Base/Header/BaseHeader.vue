@@ -48,15 +48,15 @@
                         </option>
                     </select>
 
-                    <NuxtLinkLocale
-                        to="/print"
-                        target="_blank"
-                        :title="`${'print'}`"
-                        :aria-label="`${'print-label'}`"
+                    <a
+                        :href="`/print/${i18n.locale.value}.pdf`"
+                        :download="$t('app.pdfFileName')"
+                        :title="$t('app.pdfFileName')"
+                        :aria-label="$t('app.pdfFileName')"
                         :class="$style.print"
                     >
                         <Icon name="uil:print" />
-                    </NuxtLinkLocale>
+                    </a>
                 </div>
             </div>
 
