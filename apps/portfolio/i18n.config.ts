@@ -44,7 +44,12 @@ export default defineI18nConfig(() => ({
                 index: {
                     profile: {
                         title: 'О себе',
-                        text: 'Я Senior Frontend Developer с опытом проектирования и внедрения архитектур веб-приложений. Увлекаюсь поиском эффективных решений и повышением производительности. Мой путь включает значительный вклад в улучшение кода, рефакторинг и успешное наставничество в командах WinTech и Idaproject. Всегда нацелен на высокое качество кода, наращивание технического потенциала команды и внедрение лучших практик разработки.',
+                        text: [
+                            'Frontend-разработчик с опытом работы в сильных и классных командах. Люблю создавать удобные и красивые интерфейсы, при этом всегда обращаю внимание на качество кода и производительность. В своей работе активно использую современные подходы и практики, часто занимаюсь рефакторингом и оптимизацией. Также имею опыт в наставничестве и проведении технических собеседований, помогая команде развиваться и достигать высоких результатов.',
+                            'Есть базовые знания <b>React</b> и <b>Angular</b>. Легко могу адаптироваться к этим фреймворкам, так как считаю, что они схожи по сути. Это для меня отличная возможность расширить свой стек технологий.',
+                            'Мотивирован на постоянное развитие и решение сложных задач, которые приносят пользу компании. Предпочитаю продуктовые компании, но готов рассмотреть проектную разработку при грамотном менеджменте.',
+                            'Готов к полной удаленной работе или переезду к офису в любой точке мира',
+                        ],
                     },
                     skills: {
                         title: 'Навыки',
@@ -53,24 +58,60 @@ export default defineI18nConfig(() => ({
                     employment: {
                         title: 'Опыт работы',
                         amount: 'Общий стаж больше {amount} лет',
+                        tasksTitle: 'Основные задачи:',
+                        achievementsTitle: 'Ключевые достижения:',
                         list: [
-                            {
-                                title: 'Vue Frontend Developer',
-                                company: 'Idaproject',
-                                type: 'Гибрид',
-                                startDate: 'Сентябрь 2020',
-                                endDate: 'Сентябрь 2023',
-                                description:
-                                    '<ul>\n<li>Работа в небольшой команде: 3 фронтенд-разработчика, 2 бэкенд-разработчика, ведущий и проектный менеджер.</li>\n<li>Использование Vue 2, Nuxt.js, JavaScript, TypeScript для создания многофункциональной системы для разработчиков.</li>\n<li>Обеспечение чистоты и читаемости кода путем внедрения и поддержания стандартов с использованием ESLint и Stylelint.</li>\n<li>Разработка визуального выбора объектов на изображениях проекта с использованием SVG и Canvas.</li>\n<li>Создание шахматной доски комнат с функционалом выбора объектов, связанных с другими разделами системы.</li>\n<li>Участие в создании более 600 уникальных блоков для конструктора сайтов, внедрение редактирования контента с помощью динамических форм.</li>\n<li>Поддержка и разработка внутренних библиотек, участие в их релизах.</li>\n<li>Обеспечение стабильности и качества релизов в продакшене, иногда выполняя роль тимлида.</li>\n</ul>',
-                            },
                             {
                                 title: 'Vue Frontend Developer',
                                 company: 'WinTech',
                                 type: 'Удаленно',
                                 startDate: 'Октябрь 2023',
                                 endDate: 'По настоящее время',
-                                description:
-                                    '<ul>\n<li>Основные задачи: \n<ul>\n<li>Проектирование и реализация новых интерфейсов и функционала.</li>\n<li>Оптимизация и поддержка существующего кода, исправление ошибок.</li>\n<li>Участие в разработке архитектуры веб-приложений.</li>\n<li>Оценка и декомпозиция проектных задач.</li>\n<li>Кроссбраузерная верстка.</li>\n</ul></li>\n<li>Досрочно завершил испытательный срок проанализировав текущие проекты и предложив рекомендации по улучшению качества кода и процессов.</li>\n<li>Был наставником нового сотрудника, что привело к успешному введению нового члена команды.</li>\n<li>Организовал онбординг и предоставлял поддержку при чтении кода.</li>\n<li>Был опыт заместителя руководителя отдела разработки в команде из 8 фронтенд-разработчиков.</li>\n<li>Провел полный рефакторинг основного проекта компании:<ul>\n<li>Уменьшил размер бандла приложения с 1500 МБ до 500 КБ.</li>\n<li>Внедрил правильный рабочий процесс команды и журнал изменений для отслеживания крупных и мелких обновлений.</li>\n<li>Увеличил производительность сайта в 5 раз.</li>\n</ul>\n</li>\n<li>Был назначен лидером стратегического проекта, что подтвердило высокую оценку моей работы и показало стремление к развитию в компании.</li>\n</ul>',
+                                tasks: [
+                                    'Проектирование и реализация новых интерфейсов и функционала.',
+                                    'Кроссбраузерная верстка.',
+                                    'Оптимизация и поддержка существующего кода, исправление ошибок.',
+                                    'Участие в разработке архитектуры веб-приложений.',
+                                    'Оценка и декомпозиция проектных задач.',
+                                    'Участие в найме и развитии команды: провожу технические собеседования, разрабатываю критерии оценки кандидатов.',
+                                ],
+                                achievements: [
+                                    'Досрочно завершил испытательный срок проанализировав текущие проекты и предложив рекомендации по улучшению качества кода и процессов.',
+                                    'Провел полный рефакторинг основного проекта компании.',
+                                    'Уменьшил размер основного бандла приложения в три раза.',
+                                    'Увеличил производительность сайта в 5 раз.',
+                                    'Обеспечение чистоты и читаемости кода путем внедрения и поддержания стандартов с использованием ESLint, Stylelint, Prettier.',
+                                    'Был наставником нового сотрудника, что привело к успешному введению нового члена команды.',
+                                    'Организовал онбординг и помогал коллегам по задачам.',
+                                    'Был опыт заместителя руководителя отдела разработки в команде из 8 фронтенд-разработчиков.',
+                                    'Проводил регулярные встречи с коллегами для обсуждения и внедрения новых технологий в наш проект.',
+                                    'Ввел документирование проекта и его процессов, от правил приемки, оценки, реализации, ревьюирования задач до стайлгайда проекта.',
+                                    'Был назначен лидером стратегического проекта, что подтвердило высокую оценку моей работы и показало стремление к развитию в компании.',
+                                ],
+                            },
+                            {
+                                title: 'Vue Frontend Developer',
+                                company: 'Idaproject',
+                                type: 'Гибрид',
+                                startDate: 'Сентябрь 2020',
+                                endDate: 'Сентябрь 2023',
+                                tasks: [
+                                    'Участие в разработке продукта "IdaLite" с нуля до продакшена в небольшой команде.',
+                                    'Разработка лендинга для "IdaLite".',
+                                    'Участие в создании личного кабинета пользователя и\n' + 'его внутренних приложений с различными интеграциями и работой с Backend API.',
+                                    'Разработка архитектуры библиотеки блоков для конструктора сайта и реализация более 600 блоков с множеством функционала.',
+                                    'Разработка визуального выбора объектов на изображениях проекта с использованием SVG и Canvas.',
+                                    'Разработка SSR-сайта, который генерировал сайты, собранные в конструкторе.',
+                                ],
+                                achievements: [
+                                    'Внес значительный вклад во внутренние репозитории с конфигурациями, UI-библиотеками и инструментами.',
+                                    'Активно участвовал в Code review и рефакторинге кода для повышения его читаемости и производительности.',
+                                    'Проявил способность разбираться в чужом коде и успешно интегрировался в команду разработчиков, а также помогал новым коллегам.',
+                                    'Обеспечение стабильности и качества релизов в продакшене, иногда выполняя роль тимлида.\n',
+                                    'Поддержка и разработка внутренних библиотек, участие в их релизах.',
+                                    'Применял тестирование с использованием Jest для обеспечения стабильности кодовой базы.',
+                                    'Этот опыт обогатил меня глубоким пониманием <b>Vue.js</b> и <b>Nuxt.js</b>, а также улучшил навыки командной работы, разработки и оптимизации.',
+                                ],
                             },
                         ],
                     },
@@ -139,13 +180,13 @@ export default defineI18nConfig(() => ({
                 seo: {
                     title: 'Alexander Ovchinnikov - Senior Frontend Developer | Vue.js, Nuxt.js, TypeScript Expert',
                     description:
-                        'Explore the portfolio of Alexander Ovchinnikov, Senior Frontend Developer specializing in Vue.js, Nuxt.js, and TypeScript. Discover his projects, skills, and career history.',
+                        'Explore the portfolio of Alexander Ovchinnikov, Senior Frontend Developer specializing in Vue.js, Nuxt.js, and TypeScript. Discover projects, skills, and work history.',
                     keywords: 'Alexander Ovchinnikov, Frontend Developer, Vue.js Developer, Nuxt.js Expert, TypeScript, Web Development, Portfolio, Senior Developer',
                     author: 'Alexander Ovchinnikov',
                     publisher: 'Alexander Ovchinnikov',
                     og: {
                         title: 'Alexander Ovchinnikov - Senior Frontend Developer',
-                        description: 'Discover the professional portfolio of Alexander Ovchinnikov, showcasing his expertise and projects in Vue.js, Nuxt.js, and TypeScript.',
+                        description: 'Explore the professional portfolio of Alexander Ovchinnikov, featuring projects and expertise in Vue.js, Nuxt.js, and TypeScript.',
                         script: {
                             name: 'Alexander Ovchinnikov',
                             jobTitle: 'Senior Frontend Developer',
@@ -155,7 +196,7 @@ export default defineI18nConfig(() => ({
                     },
                     twitter: {
                         title: 'Alexander Ovchinnikov - Senior Frontend Developer',
-                        description: 'Explore the portfolio and projects of Alexander Ovchinnikov, an expert in Vue.js, Nuxt.js, and TypeScript.',
+                        description: 'Explore the portfolio and projects of Alexander Ovchinnikov, expert in Vue.js, Nuxt.js, and TypeScript.',
                     },
                 },
             },
@@ -173,7 +214,12 @@ export default defineI18nConfig(() => ({
                 index: {
                     profile: {
                         title: 'About Me',
-                        text: 'I am a Senior Frontend Developer with extensive experience in designing and implementing web application architectures. I am passionate about finding efficient solutions and enhancing performance. My journey includes significant contributions in code improvement, refactoring, and successful mentorship at WinTech and Idaproject. I am always focused on delivering high-quality code, enhancing the technical capabilities of the team, and implementing best development practices.',
+                        text: [
+                            'Frontend developer with experience working in strong and great teams. I love creating user-friendly and beautiful interfaces, while always paying attention to code quality and performance. I actively use modern approaches and practices in my work, often engaging in refactoring and optimization. I also have experience in mentoring and conducting technical interviews, helping the team grow and achieve high results.',
+                            'I have basic knowledge of <b>React</b> and <b>Angular</b>. I can easily adapt to these frameworks as I find them similar in nature. This is a great opportunity for me to expand my tech stack.',
+                            'I am motivated for continuous development and solving complex problems that bring value to the company. I prefer product companies but am open to project-based development with good management.',
+                            'I am open to fully remote work or relocating to an office anywhere in the world.',
+                        ],
                     },
                     skills: {
                         title: 'Skills',
@@ -182,24 +228,60 @@ export default defineI18nConfig(() => ({
                     employment: {
                         title: 'Work Experience',
                         amount: 'Total experience is more than {amount} years',
+                        tasksTitle: 'Key Responsibilities:',
+                        achievementsTitle: 'Key Achievements:',
                         list: [
-                            {
-                                title: 'Vue Frontend Developer',
-                                company: 'Idaproject',
-                                type: 'Hybrid',
-                                startDate: 'September 2020',
-                                endDate: 'September 2023',
-                                description:
-                                    '<ul>\n<li>Worked in a small team: 3 frontend developers, 2 backend developers, a lead, and a project manager.</li>\n<li>Used Vue 2, Nuxt.js, JavaScript, and TypeScript to create a multifunctional system for developers.</li>\n<li>Ensured code quality and readability by implementing and maintaining standards using ESLint and Stylelint.</li>\n<li>Developed a visual selection of project objects using SVG and Canvas.</li>\n<li>Created a chessboard-like layout for selecting objects connected to other sections of the system.</li>\n<li>Contributed to the creation of over 600 unique blocks for the website builder, enabling content editing through dynamic forms.</li>\n<li>Supported and developed internal libraries, participating in their releases.</li>\n<li>Ensured stability and quality of production releases, sometimes taking on the role of a team lead.</li>\n</ul>',
-                            },
                             {
                                 title: 'Vue Frontend Developer',
                                 company: 'WinTech',
                                 type: 'Remote',
                                 startDate: 'October 2023',
                                 endDate: 'Present',
-                                description:
-                                    "<ul>\n<li>Main tasks: \n<ul>\n<li>Design and implement new interfaces and functionality.</li>\n<li>Optimize and maintain existing code, fix bugs.</li>\n<li>Participate in web application architecture development.</li>\n<li>Estimate and decompose project tasks.</li>\n<li>Cross-browser layout implementation.</li>\n</ul></li>\n<li>Completed the probation period early by analyzing current projects and providing recommendations for code and process quality improvement.</li>\n<li>Mentored a new employee, successfully integrating them into the team.</li>\n<li>Organized onboarding and provided support in code review.</li>\n<li>Acted as deputy head of the development department in a team of 8 frontend developers.</li>\n<li>Conducted a full refactoring of the company's main project:<ul>\n<li>Reduced the application bundle size from 1500 MB to 500 KB.</li>\n<li>Introduced a proper team workflow and a changelog for tracking major and minor updates.</li>\n<li>Increased website performance by 5 times.</li>\n</ul>\n</li>\n<li>Appointed as the leader of a strategic project, confirming high appreciation of my work and demonstrating a desire for growth within the company.</li>\n</ul>",
+                                tasks: [
+                                    'Design and implement new interfaces and features.',
+                                    'Cross-browser layout.',
+                                    'Optimization and maintenance of existing code, fixing bugs.',
+                                    'Participate in the development of web application architecture.',
+                                    'Evaluate and decompose project tasks.',
+                                    'Participate in hiring and team development: conducting technical interviews, developing candidate evaluation criteria.',
+                                ],
+                                achievements: [
+                                    'Completed the probation period early by analyzing current projects and suggesting improvements in code quality and processes.',
+                                    "Performed a full refactor of the company's main project.",
+                                    'Reduced the size of the main application bundle by three times.',
+                                    'Increased website performance by 5 times.',
+                                    'Ensured code cleanliness and readability by implementing and maintaining standards using ESLint, Stylelint, and Prettier.',
+                                    'Mentored a new employee, leading to a successful onboarding process.',
+                                    'Organized onboarding and assisted colleagues with tasks.',
+                                    'Held the role of acting team leader for a team of 8 frontend developers.',
+                                    'Conducted regular meetings with colleagues to discuss and implement new technologies in our project.',
+                                    'Introduced project documentation and processes, from acceptance rules to implementation, task reviews, and style guides.',
+                                    'Appointed as the leader of a strategic project, which confirmed the high evaluation of my work and demonstrated my development potential in the company.',
+                                ],
+                            },
+                            {
+                                title: 'Vue Frontend Developer',
+                                company: 'Idaproject',
+                                type: 'Hybrid',
+                                startDate: 'September 2020',
+                                endDate: 'September 2023',
+                                tasks: [
+                                    "Participated in the development of the product 'IdaLite' from scratch to production in a small team.",
+                                    "Developed a landing page for 'IdaLite'.",
+                                    'Participated in the creation of a user dashboard and its internal applications with various integrations and Backend API interaction.',
+                                    'Developed the architecture of a block library for a website builder and implemented over 600 blocks with various functionalities.',
+                                    'Developed a visual object selection tool for project images using SVG and Canvas.',
+                                    'Developed an SSR site that generated websites created in the builder.',
+                                ],
+                                achievements: [
+                                    'Made significant contributions to internal repositories with configurations, UI libraries, and tools.',
+                                    'Actively participated in code reviews and refactoring to improve code readability and performance.',
+                                    "Showed the ability to understand others' code and successfully integrated into the development team, helping new colleagues.",
+                                    'Ensured the stability and quality of releases in production, sometimes taking on the role of team lead.',
+                                    'Supported and developed internal libraries, participated in their releases.',
+                                    'Used Jest testing to ensure the stability of the codebase.',
+                                    'This experience enriched my deep understanding of <b>Vue.js</b> and <b>Nuxt.js</b>, and improved my teamwork, development, and optimization skills.',
+                                ],
                             },
                         ],
                     },
@@ -219,42 +301,37 @@ export default defineI18nConfig(() => ({
                             homepage: 'View',
                             design: 'Design',
                         },
-                        description: 'Projects that I have created or maintained.',
+                        description: 'Projects that I have created or maintain.',
                         'n3-workspace': {
-                            description: 'A monorepository for all my projects based on Nuxt. This site is also built on it.',
+                            description: 'Monorepo for all my Nuxt projects. This website is also built on this base.',
                         },
                         'n3-workspace/converter': {
                             description:
-                                '<p>This is a single-page application (SPA) for currency conversion, implemented using the Nuxt 3 framework as part of a test task. The application includes two pages:</p>' +
-                                '<ol>\n' +
-                                "<li><strong>Homepage</strong>: Displays currency rates relative to the site's main currency.</li>\n" +
-                                '<li><strong>Conversion</strong>: A form for converting currencies with the option to select a currency and automatic value recalculation.</li>\n' +
-                                '</ol>' +
-                                "More details can be found in the application's README.",
+                                '<p dir="auto">This is a single-page application (SPA) for currency conversion built using the Nuxt 3 framework for a test task. The app includes two pages:</p><ol dir="auto"><li><strong>Home</strong>: Displays currency rates relative to the main currency of the site.</li><li><strong>Conversion</strong>: A form for currency conversion with the option to select a currency and auto-recalculate values.</li></ol>Full details can be found in the app\'s README.',
                         },
                         'n3-workspace/shopping-list': {
-                            description: 'A shopping list application for creating and sharing with Supabase database integration.',
+                            description: 'A shopping list for creating and sharing with integration to Supabase for database management.',
                         },
                         'n3-workspace/dev-kit-layer': {
-                            description: 'Nuxt 3 layer with a set of utilities, components, and modules for quick project start.',
+                            description: 'Nuxt 3 layer with utilities, components, and modules for rapid project setup.',
                         },
                         'task-trackers': {
-                            description: 'Monorepository with task trackers on various frameworks for learning and testing capabilities.',
+                            description: 'Monorepo with task trackers on various frameworks for learning and testing purposes.',
                         },
                         'groom-crm': {
-                            description: 'A simple CRM for managing and keeping track of clients in grooming salons.',
+                            description: 'A simple CRM for managing and tracking clients in grooming salons.',
                         },
                         portfolio_gallery: {
                             description: 'Examples of my work showcasing the design and functionality of my projects.',
                         },
                         'web-layout-practice': {
-                            description: 'Practical examples of various layout methods and approaches to enhance knowledge and skills.',
+                            description: 'Practical examples of various layout techniques and approaches to expand knowledge and skills.',
                         },
                         'nuxt3-template': {
-                            description: 'Nuxt 3 project template with ready-to-use settings for quick development start.',
+                            description: 'Nuxt 3 project template with pre-configured settings for quick development start.',
                         },
                         'todo-back': {
-                            description: "Backend for the 'To-Do List' project implemented in Nest.js.",
+                            description: "Backend for the 'To-Do List' project, implemented on Nest.js.",
                         },
                         'todo-front': {
                             description: "Frontend for the 'To-Do List' project.",

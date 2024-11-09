@@ -13,10 +13,31 @@
 
                 <div :class="$style.date">{{ $rt(item.startDate) }} - {{ $rt(item.endDate) }}</div>
 
-                <div
-                    :class="$style.description"
-                    v-html="$rt(item.description)"
-                ></div>
+                <div :class="$style.subtitle">
+                    {{ $t('pages.index.employment.tasksTitle') }}
+                </div>
+
+                <div :class="$style.description">
+                    <ul>
+                        <li
+                            v-for="(task, taskIndex) in item.tasks"
+                            :key="taskIndex"
+                            v-html="task"
+                        ></li>
+                    </ul>
+                </div>
+
+                <div :class="$style.subtitle">
+                    {{ $t('pages.index.employment.achievementsTitle') }}
+                </div>
+
+                <ul :class="$style.description">
+                    <li
+                        v-for="(achievement, achievementIndex) in item.achievements"
+                        :key="achievementIndex"
+                        v-html="achievement"
+                    ></li>
+                </ul>
             </div>
         </div>
     </BaseWrapper>
@@ -39,8 +60,14 @@ const amount = new Date().getFullYear() - new Date('08.09.2020').getFullYear();
     font-weight: bold;
 }
 
+.subtitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
 .date {
     margin-top: 4px;
+    margin-bottom: 12px;
     font-size: 0.75rem;
     opacity: 0.6;
 }

@@ -5,7 +5,11 @@
     >
         <div :class="$style.wrapper">
             <div :class="$style.text">
-                {{ $t('pages.index.profile.text') }}
+                <p
+                    v-for="(text, index) in $tm('pages.index.profile.text')"
+                    :key="index"
+                    v-html="$rt(text)"
+                ></p>
             </div>
         </div>
     </BaseWrapper>
@@ -18,7 +22,15 @@
 }
 
 .text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
     font-family: 'Playfair Display', serif;
     font-weight: bolder;
+    line-height: 120%;
+
+    p {
+        margin: 0;
+    }
 }
 </style>
