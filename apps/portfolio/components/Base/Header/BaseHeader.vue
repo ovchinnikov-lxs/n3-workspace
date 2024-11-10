@@ -49,6 +49,7 @@
                     </select>
 
                     <a
+                        :key="i18n.locale.value"
                         :href="`${baseURL}print/${$t('app.pdfFileName')}`"
                         target="_blank"
                         :title="$t('app.pdfFileName')"
