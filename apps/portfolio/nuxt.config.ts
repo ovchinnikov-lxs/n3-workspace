@@ -35,11 +35,11 @@ export default defineNuxtConfig({
         baseUrl: 'https://ovchinnikov-lxs.github.io/',
         defaultLocale: 'en',
         strategy: 'prefix_except_default',
-        detectBrowserLanguage: {
-            useCookie: true,
-            cookieKey: 'i18n_redirected',
-            redirectOn: 'root', // recommended
-        },
+        // detectBrowserLanguage: {
+        //     useCookie: true,
+        //     cookieKey: 'i18n_redirected',
+        //     redirectOn: 'root', // recommended
+        // },
     },
 
     pwa: {
