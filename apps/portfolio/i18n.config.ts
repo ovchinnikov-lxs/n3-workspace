@@ -46,10 +46,11 @@ export default defineI18nConfig(() => ({
                     profile: {
                         title: 'О себе',
                         text: [
-                            'Frontend-разработчик с опытом работы в сильных и классных командах. Люблю создавать удобные и красивые интерфейсы, при этом всегда обращаю внимание на качество кода и производительность. В своей работе активно использую современные подходы и практики, часто занимаюсь рефакторингом и оптимизацией. Также имею опыт в наставничестве и проведении технических собеседований, помогая команде развиваться и достигать высоких результатов.',
-                            'Есть базовые знания <b>React</b> и <b>Angular</b>. Легко могу адаптироваться к этим фреймворкам, так как считаю, что они схожи по сути. Это для меня отличная возможность расширить свой стек технологий.',
-                            'Мотивирован на постоянное развитие и решение сложных задач, которые приносят пользу компании. Предпочитаю продуктовые компании, но готов рассмотреть проектную разработку при грамотном менеджменте.',
-                            'Готов к полной удаленной работе или переезду к офису в любой точке мира',
+                            'Привет! Я Саша, во фронтенде уже больше 5 лет, могу писать на любом стеке, но люблю Vue-экосистему больше всего (зеленый цвет успокаивает). Имею разнообразный опыт в разработке, что позволяет мне к каждой задаче иметь в голове готовое решение, но люблю сначала проверить актуальные лучшие практики, чтобы сделать максимально эффективный результат. Также есть опыт в курировании проектов, обучении и найме сотрудников, а ещё приходилось руководить отделом фронтенд-разработки.',
+                            'Пишу модули, плагины, UI-киты, многостраничные сайты, лендинги, приятные анимации для лучшего UX и многое другое.',
+                            'Ищу команду, в которой можно будет расти профессионально и просто приятно находиться в атмосфере позитива и сплочённости.',
+                            'Мне нравится сначала подумать, как должен работать код, всё распланировать, а после наслаждаться процессом написания. Умею адаптироваться под требования и условия рынка, люблю стабильность и знаю, когда требуется проявить себя для максимального результата.',
+                            '<b>Планы на будущее:</b> изучить побольше методологий, углубиться в веб-рендеринг 2D/3D, прокачать знания в DevOps и прокатиться на спортивном болиде Формулы.',
                         ],
                     },
                     skills: {
@@ -217,10 +218,11 @@ export default defineI18nConfig(() => ({
                     profile: {
                         title: 'About Me',
                         text: [
-                            'Frontend developer with experience working in strong and great teams. I love creating user-friendly and beautiful interfaces, while always paying attention to code quality and performance. I actively use modern approaches and practices in my work, often engaging in refactoring and optimization. I also have experience in mentoring and conducting technical interviews, helping the team grow and achieve high results.',
-                            'I have basic knowledge of <b>React</b> and <b>Angular</b>. I can easily adapt to these frameworks as I find them similar in nature. This is a great opportunity for me to expand my tech stack.',
-                            'I am motivated for continuous development and solving complex problems that bring value to the company. I prefer product companies but am open to project-based development with good management.',
-                            'I am open to fully remote work or relocating to an office anywhere in the world.',
+                            "Hi! I'm Sasha, and I've been in frontend development for over 5 years. I can work with any stack, but I love the Vue ecosystem the most (green is calming). I have diverse experience in development, which allows me to have ready solutions for every task in mind, but I always check the latest best practices to ensure maximum efficiency. I also have experience in project curation, training, hiring employees, and even managing a frontend development department.",
+                            'I build modules, plugins, UI kits, multi-page websites, landing pages, smooth animations for better UX, and much more.',
+                            "I'm looking for a team where I can grow professionally and enjoy being in a positive and cohesive atmosphere.",
+                            "I like to think first about how the code should work, plan everything out, and then enjoy the process of writing it. I'm able to adapt to market demands, value stability, and know when to step up for the best results.",
+                            '<b>Future plans:</b> learn more methodologies, dive deeper into web rendering (2D/3D), improve my DevOps knowledge, and take a ride in a Formula race car.',
                         ],
                     },
                     skills: {

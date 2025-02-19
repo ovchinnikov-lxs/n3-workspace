@@ -25,8 +25,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 32px;
-    font-family: 'Playfair Display', serif;
-    font-weight: bolder;
+    font-weight: 500;
     line-height: 120%;
 
     p {
