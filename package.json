@@ -34,7 +34,7 @@
         "shopping-list:build:gh:pages": "pnpm shopping-list build:gh:pages",
         "portfolio:build:gh:pages": "pnpm portfolio build:gh:pages",
         "converter:build:gh:pages": "pnpm converter build:gh:pages",
-        "build:gh-pages": "pnpm shopping-list:build:gh:pages && pnpm portfolio:build:gh:pages && pnpm converter:build:gh:pages"
+        "build:gh-pages": "pnpm shopping-list:build:gh:pages && pnpm converter:build:gh:pages"
     },
     "workspaces": [
         "packages/*",

@@ -1,0 +1,42 @@
+name: Deploy Portfolio to ovchinnikov-lxs.guthub.io
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+
+        steps:
+            -   name: Checkout the repository
+                uses: actions/checkout@v2
+
+            -   name: Setup Node.js
+                uses: actions/setup-node@v2
+                with:
+                    node-version: 20
+
+            -   name: Setup pnpm
+                run: npm install -g pnpm
+
+            -   name: Create env file
+                run: |
+                    touch .env
+                    echo PORTFOLIO_NUXT_APP_BASE_URL=${{ vars.PORTFOLIO_NUXT_APP_BASE_URL }} >> .env
+                    cat .env
+
+            -   name: Install dependencies
+                run: pnpm install
+
+            -   name: Build apps
+                run: pnpm portfolio:build:gh:pages
+
+            -   name: Deploy Portfolio to GitHub Pages
+                uses: peaceiris/actions-gh-pages@v3
+                with:
+                    personal_token: ${{ secrets.PERSONAL_TOKEN }}
+                    external_repository: ovchinnikov-lxs/ovchinnikov-lxs.github.io
+                    publish_branch: gh-pages
+                    publish_dir: ./apps/portfolio/.output/public
