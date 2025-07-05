@@ -29,10 +29,6 @@ const i18nHead = useLocaleHead({
     addSeoAttributes: true,
 });
 
-const {
-    app: { baseURL },
-} = useRuntimeConfig();
-
 useHead({
     htmlAttrs: () => ({
         ...i18nHead.value.htmlAttrs,
@@ -53,7 +49,7 @@ useHead({
         {
             rel: 'icon',
             type: 'image/x-icon',
-            href: `${baseURL}/favicon.ico`,
+            href: '/favicon.ico',
         },
     ],
     script: () => [

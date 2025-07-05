@@ -50,7 +50,7 @@
 
                     <a
                         :key="i18n.locale.value"
-                        :href="`${baseURL}print/${$t('app.pdfFileName')}`"
+                        :href="`/print/${$t('app.pdfFileName')}`"
                         target="_blank"
                         :title="$t('app.pdfFileName')"
                         :aria-label="$t('app.pdfFileName')"
@@ -152,9 +152,6 @@ function useLocalSwitch() {
     };
 }
 
-const {
-    app: { baseURL },
-} = useRuntimeConfig();
 const { refHeader } = useHeaderHeight();
 const { socialList } = useSocialList();
 const { i18n, onChangeLocale } = useLocalSwitch();
