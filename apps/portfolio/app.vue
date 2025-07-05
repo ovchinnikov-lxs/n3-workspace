@@ -64,8 +64,8 @@ useHead({
                 '@type': 'Person',
                 name: t('app.seo.og.script.name'),
                 jobTitle: t('app.seo.og.script.jobTitle'),
-                url: 'https://ovchinnikov-lxs.github.io/n3-workspace/',
-                image: 'https://ovchinnikov-lxs.github.io/n3-workspace/img/avatar.webp',
+                url: 'https://ovchinnikov-lxs.github.io/',
+                image: 'https://ovchinnikov-lxs.github.io/img/avatar.webp',
                 sameAs: [
                     'https://t.me/ovchinnikov_lxs',
                     'https://www.linkedin.com/in/alexander-ovchinnikov-4a569a23b',
@@ -122,13 +122,13 @@ useSeoMeta({
     publisher: () => t('app.seo.publisher'),
     ogTitle: () => t('app.seo.og.title'),
     ogDescription: () => t('app.seo.og.description'),
-    ogImage: 'https://ovchinnikov-lxs.github.io/n3-workspace/img/avatar.webp',
-    ogUrl: 'https://ovchinnikov-lxs.github.io/n3-workspace/',
+    ogImage: 'https://ovchinnikov-lxs.github.io/img/avatar.webp',
+    ogUrl: 'https://ovchinnikov-lxs.github.io/',
     ogType: 'website',
     twitterCard: 'summary_large_image',
     twitterTitle: () => t('app.seo.twitter.title'),
     twitterDescription: () => t('app.seo.twitter.description'),
-    twitterImage: 'https://ovchinnikov-lxs.github.io/n3-workspace/img/avatar.webp',
+    twitterImage: 'https://ovchinnikov-lxs.github.io/img/avatar.webp',
 });
 
 onMounted(() => {

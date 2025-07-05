@@ -21,12 +21,6 @@ jobs:
             -   name: Setup pnpm
                 run: npm install -g pnpm
 
-            -   name: Create env file
-                run: |
-                    touch .env
-                    echo PORTFOLIO_NUXT_APP_BASE_URL=${{ vars.PORTFOLIO_NUXT_APP_BASE_URL }} >> .env
-                    cat .env
-
             -   name: Install dependencies
                 run: pnpm install
 
